@@ -1,0 +1,12 @@
+{
+  "name": "Neeraj Kanchani",
+  "short_name": "NK",
+  "description": "Systems, machine learning, and interface engineering by Neeraj Kanchani.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090909",
+  "theme_color": "#090909",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
