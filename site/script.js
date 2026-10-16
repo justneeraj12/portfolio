@@ -1,9 +1,9 @@
 (() => {
   const roleData = {
     robotics: {
-      kicker: "BEST FIT / ROBOTICS SOFTWARE",
-      title: "I build the full loop—not just the model.",
-      copy: "Perception, state estimation, control, simulation, and the tests that prove the pieces still work together.",
+      kicker: "ROBOTICS SOFTWARE",
+      title: "I like working across the stack.",
+      copy: "Perception, state estimation, control, simulation, and the tests that keep the pieces working together.",
       evidence: [
         "ROS 2 convoy architecture across five packages and isolated namespaces",
         "Real-time perception profiled from camera frame to control command",
@@ -13,9 +13,9 @@
       href: "https://github.com/justneeraj12/ee616-vision-leader-follower"
     },
     systems: {
-      kicker: "STRONG FIT / LINUX SYSTEMS",
-      title: "I treat reliability as a product feature.",
-      copy: "Native Linux interfaces, event-driven services, reversible installation, explicit permissions, and recovery paths that are designed before failure.",
+      kicker: "LINUX SYSTEMS",
+      title: "I care about the boring reliability details.",
+      copy: "Native Linux interfaces, event-driven services, reversible installation, explicit permissions, and recovery paths that are planned before failure.",
       evidence: [
         "One Qt 6 and Wayland control plane replacing a fragmented widget stack",
         "Fail-closed PAM authentication with a minimal C boundary",
@@ -25,9 +25,9 @@
       href: "https://github.com/justneeraj12/nocturne-hyprland"
     },
     ml: {
-      kicker: "STRONG FIT / APPLIED ML",
-      title: "I measure the pipeline around the model.",
-      copy: "I care about data boundaries, latency, leakage, interpretability, and whether an inference result can survive contact with a real system.",
+      kicker: "APPLIED ML",
+      title: "I look past the model score.",
+      copy: "I pay attention to data boundaries, latency, leakage, interpretability, and whether an inference result is useful inside the larger system.",
       evidence: [
         "YOLOv8n perception profiled at 9.02 ms p95 inference latency",
         "Speaker-independent cross-lingual research design with leakage controls",

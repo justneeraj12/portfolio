@@ -107,14 +107,18 @@ h1, h2, h3, p { margin-top: 0; }
 .machine-live, .trace-head span:last-child { color: var(--green); }
 .machine-foot { position: absolute; right: 0; bottom: 0; left: 0; border-top: 1px solid var(--line); border-bottom: 0; }
 .orbit-field { position: absolute; inset: 42px 0; overflow: hidden; background: linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px); background-size: 28px 28px; }
-.orbit { position: absolute; left: 50%; top: 50%; border: 1px solid #292929; border-radius: 50%; transform: translate(-50%,-50%); }
+.orbit-field::after { content: ""; position: absolute; z-index: 0; left: 50%; top: 50%; width: 370px; height: 370px; border-radius: 50%; transform: translate(-50%,-50%); background: conic-gradient(from 210deg, transparent 0 72%, rgba(237,81,68,.11) 88%, transparent 96%); mask-image: radial-gradient(circle, transparent 0 15%, #000 75%); }
+.orbit { position: absolute; z-index: 1; left: 50%; top: 50%; border: 1px solid #292929; border-radius: 50%; transform: translate(-50%,-50%); }
+.orbit::after { content: ""; position: absolute; left: 50%; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: var(--red); box-shadow: 0 0 12px rgba(237,81,68,.85); }
 .orbit-a { width: 280px; height: 280px; }
 .orbit-b { width: 410px; height: 410px; border-style: dashed; }
-.orbit-core { position: absolute; left: 50%; top: 50%; width: 90px; height: 90px; display: grid; place-content: center; border: 1px solid var(--red-soft); background: #0a0a0a; transform: translate(-50%,-50%) rotate(45deg); text-align: center; }
+.orbit-b::after { width: 4px; height: 4px; top: auto; bottom: -2px; background: var(--green); box-shadow: 0 0 10px rgba(136,167,139,.8); }
+.orbit-core { position: absolute; z-index: 3; left: 50%; top: 50%; width: 90px; height: 90px; display: grid; place-content: center; border: 1px solid var(--red-soft); background: #0a0a0a; transform: translate(-50%,-50%) rotate(45deg); text-align: center; }
 .orbit-core > * { transform: rotate(-45deg); }
 .orbit-core span { color: var(--text); font: 700 1.3rem var(--mono); }
 .orbit-core small { color: var(--red); font: 500 .45rem var(--mono); }
-.node { position: absolute; width: 126px; padding: .7rem; border: 1px solid var(--line-strong); background: #0d0d0d; }
+.node { position: absolute; z-index: 4; width: 126px; padding: .7rem; border: 1px solid var(--line-strong); background: #0d0d0d; }
+.node::after { content: ""; position: absolute; right: 7px; top: 7px; width: 4px; height: 4px; border-radius: 50%; background: #424242; }
 .node > span { display: block; margin-bottom: .25rem; color: var(--red); font: 600 .5rem var(--mono); }
 .node b { display: block; font: 650 .66rem var(--mono); }
 .node small { color: var(--dim); font: .5rem var(--mono); }
@@ -304,6 +308,34 @@ h1, h2, h3, p { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .orbit-field::after { animation: radar-sweep 9s linear infinite; }
+  .orbit-a { animation: orbit-clockwise 12s linear infinite; }
+  .orbit-b { animation: orbit-counter 24s linear infinite; }
+  .orbit-core { animation: core-breathe 4s ease-in-out infinite; }
+  .node::after { animation: node-signal 4.8s ease-in-out infinite; }
+  .node-state::after { animation-delay: 1.6s; }
+  .node-control::after { animation-delay: 3.2s; }
+  .trace-chart span { transform-origin: bottom; animation: trace-rise .7s ease-out both; }
+  .trace-chart span:nth-child(2) { animation-delay: .04s; }.trace-chart span:nth-child(3) { animation-delay: .08s; }.trace-chart span:nth-child(4) { animation-delay: .12s; }
+  .trace-chart span:nth-child(5) { animation-delay: .16s; }.trace-chart span:nth-child(6) { animation-delay: .2s; }.trace-chart span:nth-child(7) { animation-delay: .24s; }
+  .trace-chart span:nth-child(8) { animation-delay: .28s; }.trace-chart span:nth-child(9) { animation-delay: .32s; }.trace-chart span:nth-child(10) { animation-delay: .36s; }
+  .trace-chart span:nth-child(11) { animation-delay: .4s; }.trace-chart span:nth-child(12) { animation-delay: .44s; }
+}
+
+@keyframes radar-sweep { to { transform: translate(-50%,-50%) rotate(1turn); } }
+@keyframes orbit-clockwise { to { transform: translate(-50%,-50%) rotate(1turn); } }
+@keyframes orbit-counter { to { transform: translate(-50%,-50%) rotate(-1turn); } }
+@keyframes core-breathe {
+  0%, 100% { box-shadow: 0 0 0 rgba(237,81,68,0); }
+  50% { box-shadow: 0 0 28px rgba(237,81,68,.13); }
+}
+@keyframes node-signal {
+  0%, 18%, 100% { background: #424242; box-shadow: none; }
+  5%, 12% { background: var(--green); box-shadow: 0 0 9px rgba(136,167,139,.85); }
+}
+@keyframes trace-rise { from { transform: scaleY(.06); opacity: .25; } }
 
 @media (prefers-contrast: more) {
   :root { --line: #464646; --dim: #aaa69e; --muted: #cfcbc3; }

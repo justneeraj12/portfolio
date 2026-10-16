@@ -47,7 +47,7 @@ test("required claims and evidence boundaries are present", () => {
     "Face Unlock for Linux",
     "Cross-lingual speech emotion",
     "Simulation-validated",
-    "Where do I fit"
+    "How I tend to"
   ]) assert.ok(html.includes(phrase), `missing: ${phrase}`);
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
 });
