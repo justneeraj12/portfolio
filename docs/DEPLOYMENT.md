@@ -2,6 +2,17 @@
 
 This repository is ready for GitHub Pages, but publishing is intentionally separate from DNS. Complete the steps in order and verify each state before changing the next one.
 
+## Fastest option: Cloudflare Pages Direct Upload
+
+If you want a free public URL without Git or build configuration:
+
+1. Run `npm run package` in this repository.
+2. In Cloudflare, open **Workers & Pages → Create application → Get started → Drag and drop your files**.
+3. Choose a project name and upload `neeraj-portfolio-upload.zip`.
+4. Select **Deploy site**. The site will receive a `pages.dev` URL.
+
+This is the lowest-friction route. Each future update is another drag-and-drop deployment. Choose GitHub Pages below if you prefer every push to publish automatically.
+
 ## 1. Create the destination repository
 
 Create a new public repository under `justneeraj12` (for example, `portfolio`) without adding a README, license, or `.gitignore`. Then connect and push:

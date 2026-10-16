@@ -1,6 +1,6 @@
-# Neeraj Kanchani — Portfolio
+# Neeraj Kanchani — Robotics Portfolio
 
-A fast, dependency-free personal portfolio with the NOC / Nocturne visual language: near-black surfaces, restrained red signal color, compact type, and terminal-inspired interactions.
+A recruiter-focused robotics portfolio with the NOC / Nocturne visual language: near-black surfaces, restrained red signal color, compact type, and control-system details.
 
 ## Local development
 
@@ -20,7 +20,13 @@ Open `http://localhost:4173`. The deployable site lives in `site/`; tests and de
 - Small progressive enhancements: `site/script.js`
 - Search/social metadata: `<head>` in `site/index.html`, `site/robots.txt`, and `site/sitemap.xml`
 
-The site uses no web fonts, analytics, trackers, frameworks, or runtime APIs. JavaScript is progressive enhancement; the content and navigation remain usable without it.
+The site uses no web fonts, analytics, trackers, frameworks, or runtime APIs. JavaScript powers the role-fit console as progressive enhancement; the core content remains usable without it.
+
+## Fastest free publishing
+
+Run `npm run package`, then drag `neeraj-portfolio-upload.zip` into a new Cloudflare Pages Direct Upload project. This produces a free `pages.dev` URL without build settings or framework configuration.
+
+For automatic publishing from GitHub, the included workflow deploys `site/` to GitHub Pages after each push to `main`.
 
 ## Deployment
 

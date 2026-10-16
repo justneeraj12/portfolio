@@ -1,74 +1,99 @@
 (() => {
+  const roleData = {
+    robotics: {
+      kicker: "BEST FIT / ROBOTICS SOFTWARE",
+      title: "I build the full loop—not just the model.",
+      copy: "Perception, state estimation, control, simulation, and the tests that prove the pieces still work together.",
+      evidence: [
+        "ROS 2 convoy architecture across five packages and isolated namespaces",
+        "Real-time perception profiled from camera frame to control command",
+        "Field-tested UAV/UUV perception and control workflows"
+      ],
+      skills: ["ROS 2", "C++", "Python", "Gazebo", "OpenCV"],
+      href: "https://github.com/justneeraj12/ee616-vision-leader-follower"
+    },
+    systems: {
+      kicker: "STRONG FIT / LINUX SYSTEMS",
+      title: "I treat reliability as a product feature.",
+      copy: "Native Linux interfaces, event-driven services, reversible installation, explicit permissions, and recovery paths that are designed before failure.",
+      evidence: [
+        "One Qt 6 and Wayland control plane replacing a fragmented widget stack",
+        "Fail-closed PAM authentication with a minimal C boundary",
+        "Clean Ubuntu and Arch CI with documented rollback and verification"
+      ],
+      skills: ["Modern C++", "Qt 6", "Linux", "Wayland", "D-Bus"],
+      href: "https://github.com/justneeraj12/nocturne-hyprland"
+    },
+    ml: {
+      kicker: "STRONG FIT / APPLIED ML",
+      title: "I measure the pipeline around the model.",
+      copy: "I care about data boundaries, latency, leakage, interpretability, and whether an inference result can survive contact with a real system.",
+      evidence: [
+        "YOLOv8n perception profiled at 9.02 ms p95 inference latency",
+        "Speaker-independent cross-lingual research design with leakage controls",
+        "Predictive modeling across more than 10,000 medical samples"
+      ],
+      skills: ["PyTorch", "YOLO", "OpenCV", "Signal processing", "Evaluation"],
+      href: "https://github.com/justneeraj12/cross-lingual-speech-emotion-recognition"
+    }
+  };
+
   const header = document.querySelector("[data-header]");
   const sections = [...document.querySelectorAll("[data-section]")];
   const navLinks = [...document.querySelectorAll("[data-nav]")];
-  const dialog = document.querySelector("[data-command-dialog]");
-  const openButton = document.querySelector("[data-command-open]");
-  const input = document.querySelector("[data-command-input]");
-  const commandItems = [...document.querySelectorAll("[data-command-list] [data-label]")];
-  const copyButton = document.querySelector("[data-copy-email]");
+  const roleTabs = [...document.querySelectorAll("[data-role-tab]")];
 
   const syncHeader = () => header?.classList.toggle("is-scrolled", window.scrollY > 24);
   syncHeader();
   window.addEventListener("scroll", syncHeader, { passive: true });
 
   if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const active = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!active) return;
-        navLinks.forEach((link) => {
-          if (link.dataset.nav === active.target.id) link.setAttribute("aria-current", "true");
-          else link.removeAttribute("aria-current");
-        });
-      },
-      { rootMargin: "-35% 0px -52%", threshold: [0, 0.1, 0.25, 0.5] }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      const active = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!active) return;
+      navLinks.forEach((link) => {
+        if (link.dataset.nav === active.target.id) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+    }, { rootMargin: "-34% 0px -54%", threshold: [0, .1, .25, .5] });
     sections.forEach((section) => observer.observe(section));
   }
 
-  const openDialog = () => {
-    if (!dialog?.open) dialog?.showModal();
-    input.value = "";
-    commandItems.forEach((item) => { item.hidden = false; });
-    window.setTimeout(() => input?.focus(), 40);
+  const renderRole = (name) => {
+    const role = roleData[name];
+    if (!role) return;
+    document.querySelector("[data-role-kicker]").textContent = role.kicker;
+    document.querySelector("[data-role-title]").textContent = role.title;
+    document.querySelector("[data-role-copy]").textContent = role.copy;
+    document.querySelector("[data-role-evidence]").replaceChildren(...role.evidence.map((item, index) => {
+      const li = document.createElement("li");
+      const number = document.createElement("span");
+      number.textContent = String(index + 1).padStart(2, "0");
+      li.append(number, document.createTextNode(item));
+      return li;
+    }));
+    document.querySelector("[data-role-skills]").replaceChildren(...role.skills.map((skill) => {
+      const span = document.createElement("span");
+      span.textContent = skill;
+      return span;
+    }));
+    document.querySelector("[data-role-link]").href = role.href;
+    roleTabs.forEach((tab) => tab.setAttribute("aria-selected", String(tab.dataset.roleTab === name)));
   };
 
-  openButton?.addEventListener("click", openDialog);
-  document.addEventListener("keydown", (event) => {
-    const shortcut = (event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k";
-    const slash = event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName);
-    if (shortcut || slash) {
+  roleTabs.forEach((tab) => {
+    tab.addEventListener("click", () => renderRole(tab.dataset.roleTab));
+    tab.addEventListener("keydown", (event) => {
+      if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
       event.preventDefault();
-      openDialog();
-    }
-  });
-
-  input?.addEventListener("input", () => {
-    const query = input.value.trim().toLowerCase();
-    commandItems.forEach((item) => { item.hidden = !item.dataset.label.includes(query); });
-  });
-
-  input?.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter") return;
-    const firstVisible = commandItems.find((item) => !item.hidden);
-    firstVisible?.click();
-  });
-
-  dialog?.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
-  });
-
-  document.querySelectorAll("[data-command]").forEach((item) => {
-    item.addEventListener("click", () => {
-      const target = document.getElementById(item.dataset.command);
-      dialog?.close();
-      target?.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      const direction = event.key === 'ArrowRight' ? 1 : -1;
+      const next = roleTabs[(roleTabs.indexOf(tab) + direction + roleTabs.length) % roleTabs.length];
+      next.focus();
+      next.click();
     });
   });
 
+  const copyButton = document.querySelector("[data-copy-email]");
   copyButton?.addEventListener("click", async () => {
     const original = copyButton.textContent;
     try {

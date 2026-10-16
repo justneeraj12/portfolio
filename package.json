@@ -5,7 +5,8 @@
   "description": "Static personal portfolio for Neeraj Kanchani.",
   "scripts": {
     "serve": "python3 -m http.server 4173 --directory site",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "package": "cd site && zip -FS -r ../neeraj-portfolio-upload.zip . -x '*.DS_Store'"
   },
   "engines": {
     "node": ">=20"

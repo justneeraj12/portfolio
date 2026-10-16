@@ -11,6 +11,7 @@ test("required static assets exist and are non-empty", () => {
     "site/index.html",
     "site/styles.css",
     "site/script.js",
+    "site/neeraj-kanchani-resume.pdf",
     "site/favicon.svg",
     "site/social-card.png",
     "site/robots.txt",
@@ -25,7 +26,7 @@ test("required static assets exist and are non-empty", () => {
 
 test("page has one primary heading and all required sections", () => {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
-  for (const id of ["top", "systems", "path", "research", "contact"]) {
+  for (const id of ["top", "proof", "fit", "experience", "about", "contact"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }
 });
@@ -39,14 +40,14 @@ test("navigation anchors resolve to page ids", () => {
 test("required claims and evidence boundaries are present", () => {
   for (const phrase of [
     "M.S. Electrical &amp; Computer Engineering",
-    "Expected Dec 2026",
+    "Expected December 2026",
     "B.E. Artificial Intelligence &amp; Machine Learning",
-    "NOC / Nocturne",
-    "Vision Leader–Follower",
+    "Nocturne Operations Console",
+    "Vision-only warehouse convoy",
     "Face Unlock for Linux",
-    "Cross-Lingual Speech Emotion Recognition",
-    "Simulation project; no physical-hardware deployment claim",
-    "Full model training and performance results are not yet complete"
+    "Cross-lingual speech emotion",
+    "Simulation-validated",
+    "Where do I fit"
   ]) assert.ok(html.includes(phrase), `missing: ${phrase}`);
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
 });
@@ -61,6 +62,7 @@ test("production metadata and accessibility affordances are present", () => {
     'aria-label="Primary navigation"'
   ]) assert.ok(html.includes(phrase) || css.includes(phrase), `missing: ${phrase}`);
   assert.ok(script.includes("navigator.clipboard"));
+  assert.ok(script.includes("roleData"));
 });
 
 test("site has no external runtime dependencies", () => {

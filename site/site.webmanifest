@@ -1,8 +1,8 @@
 {
   "name": "Neeraj Kanchani",
   "short_name": "NK",
-  "description": "Systems, machine learning, and interface engineering by Neeraj Kanchani.",
-  "start_url": "/",
+  "description": "Robotics software, real-time perception, and Linux systems by Neeraj Kanchani.",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#090909",
   "theme_color": "#090909",

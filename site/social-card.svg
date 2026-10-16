@@ -13,10 +13,10 @@
   <rect width="1200" height="630" fill="url(#glow)"/>
   <path d="M70 74H1130M70 556H1130" stroke="#2a2a2a"/>
   <rect x="70" y="73" width="96" height="3" fill="#d33b31"/>
-  <text x="70" y="130" fill="#d33b31" font-family="monospace" font-size="16" letter-spacing="3">NK//SYSTEMS</text>
+  <text x="70" y="130" fill="#e04b3f" font-family="monospace" font-size="16" letter-spacing="3">NK//ROBOTICS SOFTWARE</text>
   <text x="70" y="275" fill="#f1efe9" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" letter-spacing="-5">Neeraj Kanchani</text>
-  <text x="70" y="366" fill="#94918a" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="400" letter-spacing="-2">Systems. ML. Interfaces.</text>
-  <text x="70" y="510" fill="#68665f" font-family="monospace" font-size="16" letter-spacing="2">LINUX / VISION / ROBOTICS SIMULATION / MACHINE LEARNING</text>
+  <text x="70" y="366" fill="#aaa69e" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="400" letter-spacing="-2">I make robots see, decide, and move.</text>
+  <text x="70" y="510" fill="#817e77" font-family="monospace" font-size="16" letter-spacing="2">ROS 2 / C++ / PYTHON / COMPUTER VISION / LINUX</text>
   <g transform="translate(1040 466)">
     <rect width="90" height="90" fill="none" stroke="#343434"/>
     <text x="45" y="53" text-anchor="middle" fill="#f1efe9" font-family="monospace" font-size="24" font-weight="700">NK</text>
