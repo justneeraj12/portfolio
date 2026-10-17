@@ -17,10 +17,12 @@ Open `http://localhost:4173`. The deployable site lives in `site/`; tests and de
 
 - Primary content: `site/index.html`
 - Design tokens and responsive layout: `site/styles.css`
+- Essay: `site/writing/the-one-centimeter-advantage/index.html` (source copy in `docs/writing/`)
+- Reading styles: `site/writing.css`
 - Small progressive enhancements: `site/script.js`
 - Search/social metadata: `<head>` in `site/index.html`, `site/robots.txt`, and `site/sitemap.xml`
 
-The site uses no web fonts, analytics, trackers, frameworks, or runtime APIs. JavaScript powers the role-fit console as progressive enhancement; the core content remains usable without it.
+The site uses no web fonts, analytics, trackers, or frameworks. The essay loads public GitHub comments and reaction totals when the discussion section approaches the viewport; it needs no API key. JavaScript powers the role-fit console as progressive enhancement; the core content remains usable without it.
 
 ## Fastest free publishing
 
@@ -29,6 +31,12 @@ Run `npm run package`, then drag `neeraj-portfolio-upload.zip` into a new Cloudf
 For automatic publishing from GitHub, the included workflow deploys `site/` to GitHub Pages after each push to `main`.
 
 ## Deployment
+
+Live site: https://justneeraj12.github.io/portfolio/
+
+Essay: https://justneeraj12.github.io/portfolio/writing/the-one-centimeter-advantage/
+
+The essay is static HTML and remains readable with JavaScript disabled. No account, analytics, or subscription is required. Metadata uses the active GitHub Pages URL; update it when a custom domain is connected.
 
 The GitHub Actions workflow verifies the site and publishes `site/` to GitHub Pages after each push to `main`. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for first publish and the verified sequence for connecting `justneeraj.tech`.
 
@@ -39,3 +47,9 @@ Project descriptions are based on the public `justneeraj12` repositories. Status
 ## License
 
 The implementation is MIT licensed. Personal copy, identity, and project descriptions remain attributable to Neeraj Kanchani.
+
+## Essay discussion and sharing
+
+Comments and reactions use [GitHub issue #1](https://github.com/justneeraj12/portfolio/issues/1). Visitors read the article without signing in; commenting and reacting open GitHub and require a GitHub account. Moderate comments in that issue. The page displays the latest page of up to 30 comments, omits minimized comments, and retains direct links if the public API is unavailable or rate-limited. No visitor credentials are stored.
+
+Native sharing is used where supported, with a copy-link fallback. `site/writing.js` handles sharing; `site/writing-comments.js` handles discussion display.

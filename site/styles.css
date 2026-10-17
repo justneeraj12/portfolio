@@ -340,3 +340,20 @@ h1, h2, h3, p { margin-top: 0; }
 @media (prefers-contrast: more) {
   :root { --line: #464646; --dim: #aaa69e; --muted: #cfcbc3; }
 }
+
+/* Writing shares the portfolio's NOC visual language. */
+.header-actions { display: flex; justify-content: flex-end; align-items: center; gap: 1.2rem; }
+.mobile-writing { display: none; }
+.writing { border-top: 1px solid var(--line); }
+.writing-card { display: grid; grid-template-columns: .25fr 1fr auto; gap: 2rem; padding: 2.5rem 0; border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line); }
+.writing-meta, .writing-time { color: var(--muted); font: .65rem/1.8 var(--mono); }
+.writing-meta span { display: block; }
+.writing-meta span:first-child { color: var(--red); margin-bottom: .7rem; }
+.writing-card h3 { font-size: clamp(1.7rem,3vw,2.7rem); line-height: 1.1; letter-spacing: -.04em; }
+.writing-card h3 a { text-decoration: none; }
+.writing-card h3 a:hover { color: var(--red); }
+.writing-card h3 span { color: var(--red); }
+.writing-card p { max-width: 670px; color: var(--muted); line-height: 1.8; }
+.writing-card .text-link { display: inline-block; margin-top: 1rem; }
+@media (max-width: 1080px) { .mobile-writing { display: inline; color: var(--muted); font: .65rem var(--mono); text-decoration: none; } }
+@media (max-width: 760px) { .writing-card { grid-template-columns: 1fr; gap: 1rem; } }
