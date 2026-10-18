@@ -23,7 +23,13 @@
 .essay-body a:hover { color: var(--red); }
 .essay-body li { margin-bottom: .9rem; padding-left: .25rem; }
 .essay-body ul { padding-left: 1.25rem; margin: 0 0 1.7rem; }
-.essay-body > p:nth-child(2) { color: var(--muted); font: .8rem/1.7 var(--sans); border-left: 2px solid var(--red-soft); padding-left: 1rem; }
+.essay-body sup { font: .65em var(--mono); vertical-align: super; line-height: 0; }
+.essay-body sup a { padding: .2em; }
+.essay-body [id^="note-"] { scroll-margin-top: 2rem; }
+.essay-body [id^="note-"]:target { outline: 1px solid var(--red-soft); outline-offset: .4rem; }
+.essay-notes { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font: .9rem/1.75 var(--sans); }
+.essay-notes h2 { margin: 0 0 1.5rem; padding: 0; border: 0; font-size: 1.4rem; letter-spacing: -.02em; }
+.essay-notes p { margin-bottom: 1.25rem; }
 .essay-end { max-width: 740px; margin: 4rem auto 5rem; padding: 2rem 0; border-top: 1px solid var(--red-soft); }
 .essay-end > span { font: .6rem var(--mono); color: var(--red); }
 .essay-end p { font-size: 1.4rem; margin: 1rem 0; }
