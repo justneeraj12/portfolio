@@ -10,13 +10,13 @@ function node() {
     set innerHTML(_) { throw new Error('Unsafe HTML rendering'); },
   };
 }
-async function setup(responses) {
+async function setup(responses, dataset = undefined) {
   const parts = Object.fromEntries(['status','counts','list','refresh'].map(key => [key, node()]));
   const map = { '[data-comments-status]': parts.status, '[data-comment-counts]': parts.counts,
     '[data-comments-list]': parts.list, '[data-comments-refresh]': parts.refresh };
   const requests = [];
   runInNewContext(code, {
-    document: { querySelector: () => ({ querySelector: selector => map[selector] }), createElement: node },
+    document: { querySelector: () => ({ dataset, querySelector: selector => map[selector] }), createElement: node },
     window: { setTimeout: () => 1, clearTimeout() {} }, AbortController,
     fetch: async (url, options) => {
       requests.push({url,options});
@@ -54,4 +54,9 @@ test('comments render as text, ignore supplied URLs, and omit minimized comments
   const [author,,body] = parts.list.children[0].children;
   assert.equal(body.textContent,'<script>alert(1)</script>');
   assert.equal(author.href,'https://github.com/justneeraj12/portfolio/issues/1#issuecomment-42');
+});
+
+test('article data selects its own GitHub issue', async () => {
+  const {requests} = await setup([{data:{comments:0,reactions:{total_count:0}}}], {repo:'justneeraj12/portfolio',issue:'2'});
+  assert.equal(requests[0].url,'https://api.github.com/repos/justneeraj12/portfolio/issues/2');
 });

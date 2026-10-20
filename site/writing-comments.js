@@ -1,8 +1,12 @@
 (() => {
   const section = document.querySelector('[data-discussion]');
   if (!section) return;
-  const api = 'https://api.github.com/repos/justneeraj12/portfolio/issues/1';
-  const thread = 'https://github.com/justneeraj12/portfolio/issues/1';
+  const requestedRepo = section.dataset?.repo || 'justneeraj12/portfolio';
+  const requestedIssue = section.dataset?.issue || '1';
+  const repo = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(requestedRepo) ? requestedRepo : 'justneeraj12/portfolio';
+  const issue = /^\d+$/.test(requestedIssue) ? requestedIssue : '1';
+  const api = `https://api.github.com/repos/${repo}/issues/${issue}`;
+  const thread = `https://github.com/${repo}/issues/${issue}`;
   const status = section.querySelector('[data-comments-status]');
   const counts = section.querySelector('[data-comment-counts]');
   const list = section.querySelector('[data-comments-list]');

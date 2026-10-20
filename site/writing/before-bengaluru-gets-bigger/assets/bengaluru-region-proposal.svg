@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020" role="img" aria-labelledby="title desc">
+  <title id="title">Bengaluru regional proposal</title>
+  <desc id="desc">Schematic regional plan connecting Bengaluru with surrounding towns while protecting green gaps, watersheds, and distinct town centres. Routes and roles are proposals to test, not official plans.</desc>
+  <defs>
+    <style>
+      .bg{fill:#0a0a0a}.ink{fill:#f0eee8}.muted{fill:#9a9892}.faint{fill:#6e6c67}.line{stroke:#2d2c2a}.boundary{fill:none;stroke:#6a6862;stroke-width:2;stroke-dasharray:8 10}.core{fill:#171615;stroke:#4c4945;stroke-width:1.5}.green{fill:#14261d;stroke:#4d765c;stroke-width:1.5}.water{fill:#161d1a;stroke:#6a7f70;stroke-width:1.2}.rail{fill:none;stroke:#e44f44;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.regional{fill:none;stroke:#d59b5b;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.freight{fill:none;stroke:#a5a29b;stroke-width:4;stroke-dasharray:12 9;stroke-linecap:round}.cross{fill:none;stroke:#7aa487;stroke-width:5;stroke-linecap:round}.node{fill:#0a0a0a;stroke:#f0eee8;stroke-width:3}.hub{fill:#e44f44;stroke:#f0eee8;stroke-width:4}.minor{fill:#0a0a0a;stroke:#b8b5ad;stroke-width:2}.label{font:600 17px Arial,sans-serif;fill:#f0eee8}.small{font:14px Arial,sans-serif;fill:#9a9892}.tiny{font:12px Arial,sans-serif;fill:#88857f}.kicker{font:700 13px Arial,sans-serif;letter-spacing:3px;fill:#e44f44}.title{font:700 37px Arial,sans-serif;letter-spacing:-1px;fill:#f0eee8}.role{font:600 12px Arial,sans-serif;fill:#d1cec7}.call{fill:#111110;stroke:#3d3b38;stroke-width:1}.divider{stroke:#33322f;stroke-width:1}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity=".35"/></filter>
+  </defs>
+  <rect class="bg" width="1200" height="1020"/>
+  <text class="kicker" x="60" y="62">A BENGALURIAN'S REGIONAL PROPOSAL</text>
+  <text class="title" x="60" y="108">Grow a region. Do not erase the towns.</text>
+  <text class="small" x="60" y="139">Three layers: a working Bengaluru core, stronger town economies, and binding green and water limits between them.</text>
+
+  <path class="boundary" d="M170 210 Q120 300 138 435 L124 660 Q160 832 325 905 L835 905 Q1016 835 1053 680 L1032 336 Q989 221 854 190 L338 184 Q218 180 170 210Z"/>
+  <text class="tiny" x="930" y="219">author's study area</text>
+
+  <path class="green" d="M150 444 Q229 388 297 417 Q337 458 292 520 Q217 552 153 514Z"/>
+  <text class="small" x="181" y="472">western green gap</text>
+  <path class="green" d="M818 207 Q932 219 1007 302 L989 375 Q908 342 829 365 Q790 292 818 207Z"/>
+  <text class="small" x="852" y="281">hills and watershed</text>
+  <path class="green" d="M761 742 Q888 714 1015 760 L970 863 L786 882 Q722 827 761 742Z"/>
+  <text class="small" x="828" y="815">southern green gap</text>
+  <path class="green" d="M280 758 Q359 715 421 755 L412 885 L309 897 Q246 848 280 758Z"/>
+  <text class="small" x="304" y="822">forest and lake belt</text>
+
+  <ellipse class="core" cx="596" cy="539" rx="184" ry="139"/>
+  <ellipse class="boundary" cx="596" cy="539" rx="126" ry="92"/>
+  <text class="tiny" x="505" y="653">Bengaluru core / GBA coordination</text>
+
+  <path class="regional" d="M188 261 L327 354 L472 465 L596 539"/>
+  <path class="freight" d="M245 297 L352 372 L506 484"/>
+  <path class="regional" d="M596 539 L615 354 L617 236"/>
+  <path class="rail" d="M596 539 L739 433 L867 355 L989 313"/>
+  <path class="freight" d="M596 539 L766 495 L894 490 L1009 541"/>
+  <path class="cross" d="M596 539 L720 669 L846 779 L979 891"/>
+  <path class="regional" d="M596 539 L513 701 L459 861"/>
+  <path class="regional" d="M596 539 L423 649 L273 744"/>
+  <path class="rail" d="M596 539 L409 543 L235 553"/>
+  <path class="regional" d="M596 539 L404 440 L231 404"/>
+
+  <circle class="hub" cx="596" cy="539" r="14" filter="url(#shadow)"/>
+  <circle class="node" cx="188" cy="261" r="10"/><text class="label" x="113" y="244">Tumakuru</text><text class="role" x="113" y="281">industry, education, services</text>
+  <circle class="minor" cx="327" cy="354" r="7"/><text class="label" x="249" y="340">Dobbaspet</text><text class="role" x="244" y="374">freight and industrial transfer</text>
+  <circle class="node" cx="472" cy="465" r="9"/><text class="label" x="365" y="454">Nelamangala</text>
+  <circle class="node" cx="617" cy="236" r="10"/><text class="label" x="635" y="229">Devanahalli / airport</text><text class="role" x="635" y="252">aviation, logistics, export work</text>
+  <circle class="minor" cx="615" cy="354" r="7"/><text class="label" x="632" y="348">Doddaballapura</text>
+  <circle class="node" cx="867" cy="355" r="9"/><text class="label" x="880" y="347">Hoskote</text><text class="role" x="880" y="370">eastern jobs and transfer node</text>
+  <circle class="node" cx="989" cy="313" r="10"/><text class="label" x="969" y="307" text-anchor="end">Kolar</text><text class="role" x="969" y="330" text-anchor="end">local economy first</text>
+  <circle class="node" cx="1009" cy="541" r="10"/><text class="label" x="989" y="535" text-anchor="end">Bangarpet</text><text class="role" x="989" y="558" text-anchor="end">rail and freight role to test</text>
+  <circle class="node" cx="979" cy="891" r="10"/><text class="label" x="959" y="885" text-anchor="end">Hosur</text><text class="role" x="959" y="908" text-anchor="end">cross-border manufacturing market</text>
+  <circle class="minor" cx="846" cy="779" r="7"/><text class="label" x="862" y="775">Anekal</text>
+  <circle class="node" cx="459" cy="861" r="10"/><text class="label" x="475" y="856">Kanakapura</text><text class="role" x="475" y="879">ecology-sensitive growth</text>
+  <circle class="node" cx="273" cy="744" r="10"/><text class="label" x="167" y="739">Ramanagara</text><text class="role" x="137" y="762">town centre and regional services</text>
+  <circle class="minor" cx="423" cy="649" r="7"/><text class="label" x="345" y="677">Bidadi</text>
+  <circle class="node" cx="235" cy="553" r="10"/><text class="label" x="151" y="547">Magadi</text><text class="role" x="119" y="570">distinct town, not a layout belt</text>
+  <circle class="node" cx="231" cy="404" r="9"/><text class="label" x="139" y="395">Kunigal side</text>
+  <text class="label" x="617" y="530">Bengaluru</text><text class="role" x="617" y="553">jobs, research, manufacturing, culture</text>
+
+  <rect class="call" x="52" y="928" width="1096" height="57" rx="3"/>
+  <line class="rail" x1="78" y1="950" x2="122" y2="950"/><text class="small" x="136" y="955">fast regional passenger link to study</text>
+  <line class="regional" x1="392" y1="950" x2="436" y2="950"/><text class="small" x="450" y="955">town connection and feeder spine</text>
+  <line class="freight" x1="718" y1="950" x2="762" y2="950"/><text class="small" x="776" y="955">freight and logistics relationship</text>
+  <line class="cross" x1="78" y1="974" x2="122" y2="974"/><text class="small" x="136" y="979">cross-border agreement needed</text>
+  <rect class="green" x="392" y="966" width="44" height="16"/><text class="small" x="450" y="979">protected gap / watershed condition</text>
+  <text class="tiny" x="1130" y="979" text-anchor="end">schematic only · roles, routes and boundaries require public study</text>
+</svg>

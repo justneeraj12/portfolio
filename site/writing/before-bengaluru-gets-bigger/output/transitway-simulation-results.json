@@ -1,0 +1,472 @@
+{
+  "model_status": "synthetic stress test; not calibrated and not a forecast",
+  "random_seed": 20261020,
+  "peak_window_minutes": 240,
+  "replications_per_main_scenario": 12,
+  "corridors": [
+    {
+      "name": "Peenya\u2013Hebbal",
+      "demand_multiplier": 1.1,
+      "surface_capacity_pce_per_minute": 26.0,
+      "surface_free_flow_minutes": 36.0,
+      "managed_free_flow_minutes": 19.0
+    },
+    {
+      "name": "Hebbal\u2013KR Puram",
+      "demand_multiplier": 1.22,
+      "surface_capacity_pce_per_minute": 27.0,
+      "surface_free_flow_minutes": 41.0,
+      "managed_free_flow_minutes": 22.0
+    },
+    {
+      "name": "KR Puram\u2013Silk Board",
+      "demand_multiplier": 1.3,
+      "surface_capacity_pce_per_minute": 28.0,
+      "surface_free_flow_minutes": 46.0,
+      "managed_free_flow_minutes": 24.0
+    },
+    {
+      "name": "Hosur Road\u2013Central",
+      "demand_multiplier": 1.05,
+      "surface_capacity_pce_per_minute": 27.0,
+      "surface_free_flow_minutes": 39.0,
+      "managed_free_flow_minutes": 21.0
+    },
+    {
+      "name": "Mysuru Road\u2013Central",
+      "demand_multiplier": 0.94,
+      "surface_capacity_pce_per_minute": 25.0,
+      "surface_free_flow_minutes": 37.0,
+      "managed_free_flow_minutes": 20.0
+    },
+    {
+      "name": "Magadi Road\u2013Central",
+      "demand_multiplier": 0.82,
+      "surface_capacity_pce_per_minute": 24.0,
+      "surface_free_flow_minutes": 34.0,
+      "managed_free_flow_minutes": 19.0
+    }
+  ],
+  "mode_assumptions": {
+    "car_1_2": {
+      "occupancy": 1.25,
+      "pce": 1.0,
+      "base_rate_per_minute": 14.0,
+      "eligible": false,
+      "transit_priority": false,
+      "low_income_probability": 0.16,
+      "facility_charge_per_vehicle": 0.0
+    },
+    "car_4_plus": {
+      "occupancy": 4.0,
+      "pce": 1.0,
+      "base_rate_per_minute": 2.7,
+      "eligible": true,
+      "transit_priority": false,
+      "low_income_probability": 0.22,
+      "facility_charge_per_vehicle": 72.0
+    },
+    "shared_van": {
+      "occupancy": 7.0,
+      "pce": 1.1,
+      "base_rate_per_minute": 2.0,
+      "eligible": true,
+      "transit_priority": true,
+      "low_income_probability": 0.56,
+      "facility_charge_per_vehicle": 14.0
+    },
+    "minibus": {
+      "occupancy": 14.0,
+      "pce": 1.45,
+      "base_rate_per_minute": 0.95,
+      "eligible": true,
+      "transit_priority": true,
+      "low_income_probability": 0.66,
+      "facility_charge_per_vehicle": 0.0
+    },
+    "scheduled_bus": {
+      "occupancy": 38.0,
+      "pce": 2.3,
+      "base_rate_per_minute": 0.5,
+      "eligible": true,
+      "transit_priority": true,
+      "low_income_probability": 0.72,
+      "facility_charge_per_vehicle": 0.0
+    },
+    "local_freight": {
+      "occupancy": 1.2,
+      "pce": 1.55,
+      "base_rate_per_minute": 2.2,
+      "eligible": false,
+      "transit_priority": false,
+      "low_income_probability": 0.3,
+      "facility_charge_per_vehicle": 0.0
+    }
+  },
+  "managed_lane_capacity_pce_per_minute": 12.5,
+  "incident_capacity_fraction": 0.22,
+  "neural_controller": {
+    "architecture": "5 inputs \u2192 18 tanh units \u2192 9 policy actions",
+    "training_data": "9,000 randomly generated synthetic traffic states",
+    "target": "declared transit-priority heuristic, not observed Bengaluru outcomes",
+    "validation_accuracy": 0.8753086419753087,
+    "actions": [
+      {
+        "admission_gate": 0.15,
+        "price_multiplier": 0.8
+      },
+      {
+        "admission_gate": 0.15,
+        "price_multiplier": 1.0
+      },
+      {
+        "admission_gate": 0.15,
+        "price_multiplier": 1.25
+      },
+      {
+        "admission_gate": 0.45,
+        "price_multiplier": 0.8
+      },
+      {
+        "admission_gate": 0.45,
+        "price_multiplier": 1.0
+      },
+      {
+        "admission_gate": 0.45,
+        "price_multiplier": 1.25
+      },
+      {
+        "admission_gate": 0.8,
+        "price_multiplier": 0.8
+      },
+      {
+        "admission_gate": 0.8,
+        "price_multiplier": 1.0
+      },
+      {
+        "admission_gate": 0.8,
+        "price_multiplier": 1.25
+      }
+    ]
+  },
+  "main_scenarios": {
+    "baseline": {
+      "people": {
+        "mean": 124727.54999999999,
+        "p10": 122966.68,
+        "p90": 126684.79
+      },
+      "people_completed_by_240": {
+        "mean": 110551.1916666667,
+        "p10": 109614.95500000005,
+        "p90": 111105.68500000004
+      },
+      "person_hours_queued": {
+        "mean": 41636.47611111111,
+        "p10": 38809.582500000004,
+        "p90": 43904.05108333333
+      },
+      "mean_person_trip_minutes": {
+        "mean": 59.38116946455174,
+        "p10": 58.2062503444169,
+        "p90": 60.34584751453634
+      },
+      "p95_person_trip_minutes": {
+        "mean": 105.5,
+        "p10": 101.1,
+        "p90": 110.9
+      },
+      "mean_transit_shared_trip_minutes": {
+        "mean": 59.55415023405593,
+        "p10": 58.430857647738456,
+        "p90": 60.47036075534148
+      },
+      "surface_peak_queue_vehicles": {
+        "mean": 4933.833333333333,
+        "p10": 4671.0,
+        "p90": 5088.4
+      },
+      "managed_peak_queue_vehicles": {
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0
+      },
+      "managed_utilization": {
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0
+      },
+      "facility_charge_per_managed_person_rupees": {
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0
+      },
+      "low_income_charge_per_person_rupees": {
+        "mean": 0.0,
+        "p10": 0.0,
+        "p90": 0.0
+      }
+    },
+    "fixed": {
+      "people": {
+        "mean": 125096.53749999999,
+        "p10": 123666.255,
+        "p90": 126344.30500000001
+      },
+      "people_completed_by_240": {
+        "mean": 125095.33750000008,
+        "p10": 123666.25500000009,
+        "p90": 126344.30500000007
+      },
+      "person_hours_queued": {
+        "mean": 1014.5166666666668,
+        "p10": 773.8100833333333,
+        "p90": 1232.0583333333334
+      },
+      "mean_person_trip_minutes": {
+        "mean": 27.336775460645498,
+        "p10": 27.15702307137177,
+        "p90": 27.482560533984945
+      },
+      "p95_person_trip_minutes": {
+        "mean": 53.833333333333336,
+        "p10": 51.0,
+        "p90": 56.0
+      },
+      "mean_transit_shared_trip_minutes": {
+        "mean": 21.077366488145795,
+        "p10": 21.05845351131746,
+        "p90": 21.09561558743412
+      },
+      "surface_peak_queue_vehicles": {
+        "mean": 682.4166666666666,
+        "p10": 596.2,
+        "p90": 783.0
+      },
+      "managed_peak_queue_vehicles": {
+        "mean": 97.41666666666667,
+        "p10": 88.2,
+        "p90": 104.8
+      },
+      "managed_utilization": {
+        "mean": 0.5710398148148148,
+        "p10": 0.5651847222222223,
+        "p90": 0.5742680555555554
+      },
+      "facility_charge_per_managed_person_rupees": {
+        "mean": 2.743849155989796,
+        "p10": 2.692167999851617,
+        "p90": 2.791560833198184
+      },
+      "low_income_charge_per_person_rupees": {
+        "mean": 1.1440448863714192,
+        "p10": 1.1153185736171976,
+        "p90": 1.172364858821943
+      }
+    },
+    "neural": {
+      "people": {
+        "mean": 125096.53749999999,
+        "p10": 123666.255,
+        "p90": 126344.30500000001
+      },
+      "people_completed_by_240": {
+        "mean": 124918.22916666673,
+        "p10": 123563.04500000006,
+        "p90": 126149.59500000003
+      },
+      "person_hours_queued": {
+        "mean": 2828.1155555555556,
+        "p10": 2567.088416666667,
+        "p90": 3231.6808333333333
+      },
+      "mean_person_trip_minutes": {
+        "mean": 29.396921081226452,
+        "p10": 29.153808129150832,
+        "p90": 29.659234312995597
+      },
+      "p95_person_trip_minutes": {
+        "mean": 60.666666666666664,
+        "p10": 57.2,
+        "p90": 63.0
+      },
+      "mean_transit_shared_trip_minutes": {
+        "mean": 21.077366488145795,
+        "p10": 21.05845351131746,
+        "p90": 21.09561558743412
+      },
+      "surface_peak_queue_vehicles": {
+        "mean": 1147.6666666666667,
+        "p10": 1072.1,
+        "p90": 1263.8
+      },
+      "managed_peak_queue_vehicles": {
+        "mean": 70.58333333333333,
+        "p10": 67.0,
+        "p90": 75.7
+      },
+      "managed_utilization": {
+        "mean": 0.45752129629629623,
+        "p10": 0.45255444444444437,
+        "p90": 0.4615377777777777
+      },
+      "facility_charge_per_managed_person_rupees": {
+        "mean": 1.4117644874047814,
+        "p10": 1.3701381077734849,
+        "p90": 1.4765780577543774
+      },
+      "low_income_charge_per_person_rupees": {
+        "mean": 0.7303636396306711,
+        "p10": 0.7114897783402596,
+        "p90": 0.7516268398145599
+      }
+    },
+    "capture": {
+      "people": {
+        "mean": 124590.52083333336,
+        "p10": 122670.93000000001,
+        "p90": 126077.405
+      },
+      "people_completed_by_240": {
+        "mean": 111893.29166666674,
+        "p10": 110649.84500000007,
+        "p90": 113487.63500000007
+      },
+      "person_hours_queued": {
+        "mean": 37278.2225,
+        "p10": 34504.530333333336,
+        "p90": 40040.996333333336
+      },
+      "mean_person_trip_minutes": {
+        "mean": 42.53519191113367,
+        "p10": 41.535123163189795,
+        "p90": 43.700409545771244
+      },
+      "p95_person_trip_minutes": {
+        "mean": 103.0,
+        "p10": 97.3,
+        "p90": 110.6
+      },
+      "mean_transit_shared_trip_minutes": {
+        "mean": 43.17290943692155,
+        "p10": 41.92208974014592,
+        "p90": 44.71026211267098
+      },
+      "surface_peak_queue_vehicles": {
+        "mean": 166.25,
+        "p10": 159.1,
+        "p90": 174.7
+      },
+      "managed_peak_queue_vehicles": {
+        "mean": 2497.75,
+        "p10": 2315.4,
+        "p90": 2656.7
+      },
+      "managed_utilization": {
+        "mean": 1.0435284722222222,
+        "p10": 1.0275872222222222,
+        "p90": 1.0571847222222226
+      },
+      "facility_charge_per_managed_person_rupees": {
+        "mean": 2.859896877624136,
+        "p10": 2.8216153708749,
+        "p90": 2.9186343087548567
+      },
+      "low_income_charge_per_person_rupees": {
+        "mean": 1.2831209824908123,
+        "p10": 1.253341964271573,
+        "p90": 1.3192650998753483
+      }
+    },
+    "incident": {
+      "people": {
+        "mean": 125096.53749999999,
+        "p10": 123666.255,
+        "p90": 126344.30500000001
+      },
+      "people_completed_by_240": {
+        "mean": 124918.22916666673,
+        "p10": 123563.04500000006,
+        "p90": 126149.59500000003
+      },
+      "person_hours_queued": {
+        "mean": 5078.6530555555555,
+        "p10": 4559.641166666666,
+        "p90": 5554.650500000001
+      },
+      "mean_person_trip_minutes": {
+        "mean": 30.47602912097814,
+        "p10": 30.260862675396346,
+        "p90": 30.733890956957378
+      },
+      "p95_person_trip_minutes": {
+        "mean": 60.666666666666664,
+        "p10": 57.2,
+        "p90": 63.0
+      },
+      "mean_transit_shared_trip_minutes": {
+        "mean": 22.804025310644377,
+        "p10": 22.61478036497339,
+        "p90": 22.98358837684708
+      },
+      "surface_peak_queue_vehicles": {
+        "mean": 1147.6666666666667,
+        "p10": 1072.1,
+        "p90": 1263.8
+      },
+      "managed_peak_queue_vehicles": {
+        "mean": 487.1666666666667,
+        "p10": 452.8,
+        "p90": 514.6
+      },
+      "managed_utilization": {
+        "mean": 0.4979823633156966,
+        "p10": 0.4925762660619803,
+        "p90": 0.502354043839758
+      },
+      "facility_charge_per_managed_person_rupees": {
+        "mean": 1.4117644874047814,
+        "p10": 1.3701381077734849,
+        "p90": 1.4765780577543774
+      },
+      "low_income_charge_per_person_rupees": {
+        "mean": 0.7303636396306711,
+        "p10": 0.7114897783402596,
+        "p90": 0.7516268398145599
+      }
+    }
+  },
+  "sensitivity": {
+    "demand_levels": [
+      0.8,
+      1.0,
+      1.2
+    ],
+    "leakage_levels": [
+      0.0,
+      0.1,
+      0.25,
+      0.4
+    ],
+    "delay_change_percent": [
+      [
+        -99.51469471887249,
+        -96.41927640027288,
+        -36.04762838946031,
+        164.94124933676682
+      ],
+      [
+        -98.39721736698681,
+        -82.9641591112583,
+        -36.42000017170878,
+        48.500298984330264
+      ],
+      [
+        -90.57041699619917,
+        -69.35098442942366,
+        -27.17389929575177,
+        31.90699939587049
+      ]
+    ]
+  }
+}

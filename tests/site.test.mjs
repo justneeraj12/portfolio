@@ -24,6 +24,26 @@ test("required static assets exist and are non-empty", () => {
   }
 });
 
+test("Bengaluru essay and its four evidence figures are published", () => {
+  const root = "site/writing/before-bengaluru-gets-bigger";
+  for (const file of [
+    `${root}/index.html`,
+    `${root}/before-bengaluru-gets-bigger-social.png`,
+    `${root}/assets/bengaluru-region-proposal.svg`,
+    `${root}/assets/bengaluru-cityways-network.svg`,
+    `${root}/assets/bel-circle-network-sketch.png`,
+    `${root}/output/transitway-simulation-summary.png`,
+  ]) {
+    assert.ok(existsSync(file), `${file} should exist`);
+    assert.ok(statSync(file).size > 0, `${file} should not be empty`);
+  }
+  const essay = readFileSync(`${root}/index.html`, "utf8");
+  assert.match(essay, /30 min read/);
+  assert.match(essay, /data-issue="2"/);
+  assert.equal((essay.match(/<figure\b/g) ?? []).length, 4);
+  assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
+});
+
 test("page has one primary heading and all required sections", () => {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
   for (const id of ["top", "proof", "fit", "experience", "about", "contact"]) {
