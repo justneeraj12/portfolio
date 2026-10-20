@@ -12,7 +12,10 @@ Reviewed against the workspace article rules on 20 October 2026.
 - **Simulation:** Preserved the model results and every limitation. Replaced symbolic network notation with plain language and retained the key finding that the fixed published rule beat the neural controller in the synthetic test.
 - **BEL Circle and ground level:** Preserved the approved Phase 3 context and the detailed walking, cycling, bus, drainage, access, shade, lighting, and public-space tests.
 - **Governance and regional scale:** Kept the GBA, BMRDA, Ramakrishna Hegde, Karnataka and Tamil Nadu cooperation, freight, New York comparison, 2045 potential, and implementation tests. Claims remain scoped to what the cited sources establish.
+- **Statewide outdoor economy:** Added the New York State comparison as a concrete operating model: public campsites and shelters, marked trails, scenic routes, statewide wayfinding, booking, safety, and links into nearby town economies. Connected that model to the scale of Karnataka's 2026-27 state-highway programme without calling it one official superhighway plan.
+- **Public memory inside Bengaluru:** Added a citywide layer of markers, station displays, walking routes, and exhibits. The passage moves from Kempe Gowda and Lalbagh through IISc, HAL, BEL, ISRO, Electronic City, and STPI, then makes clear that workers, migrants, vendors, crews, and residents also belong in the city's history.
 - **Personal ending:** Preserved the author's supplied identity, Clarkson ECE background, New York experience, attachment to BEL Circle, time away from Bengaluru, appreciation of early GBA work, and desire to return.
+- **Next essay:** Added the author's closing thought that India has an aesthetics problem because design arrives after engineering, procurement, signage, maintenance, and political decisions, followed by the promised next idea.
 
 ## What moved into notes
 
@@ -26,13 +29,18 @@ Reviewed against the workspace article rules on 20 October 2026.
 - Pricing-equity research.
 - Full simulation architecture, assumptions, omissions, and non-forecast warning.
 - Metro Phase 3, street-design, governance, cross-border, freight, and WIPO source qualifications.
+- The separate New York outdoor systems and what each source actually establishes.
+- Karnataka's 2026-27 road-programme figures and their implementation limits.
+- Photo authors, source pages, public-domain status, and Creative Commons licences.
+- Dates and institutional roles behind the proposed Bengaluru public-memory layer.
 
 ## Publication checks
 
-- Markdown source and published HTML contain the same essay and 17 notes.
-- Reading time is 33 minutes at 220 words per minute, including notes.
-- All 31 external source URLs were preserved.
-- Five figures are present and have captions and descriptive alternative text.
+- Markdown source and published HTML contain the same essay and 21 notes.
+- Reading time is 40 minutes at 220 words per minute, including notes.
+- All 50 external source URLs were preserved.
+- Six figures containing eight images are present and have captions and descriptive alternative text.
+- The three New York photographs are stored locally with source and licence attribution in the article notes.
 - The old blue concept image is no longer used.
 - Heading links, note links, return links, canonical metadata, social metadata, share controls, and GitHub issue 2 discussion controls were validated.
 - The homepage badge, sitemap, and repository documentation were updated.
