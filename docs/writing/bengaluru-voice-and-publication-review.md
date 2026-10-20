@@ -6,8 +6,8 @@ Reviewed against the workspace article rules on 20 October 2026.
 
 - **Opening and regional proposal:** Replaced the abstract regional opening with the author's three-part proposal: improve the existing Bengaluru core, strengthen nearby towns as towns, and lock green and water limits before new development. Added proposed roles for the Tumakuru, Devanahalli, Kolar, Bangarpet, Hosur, Ramanagara, Kanakapura, and Magadi sides without presenting those roles as established plans.
 - **Regional map:** Replaced the simple ring map with a metro-style schematic that separates passenger, feeder, freight, and cross-border relationships. The caption and note keep the boundary, routes, and town roles clearly provisional.
-- **CityWays explanation:** Kept the author's explanation of the public, limited-access network and made the physical choices clearer. Elevated, underground, and protected at-grade sections now depend on the place instead of being shown as one citywide elevated structure.
-- **Operating rules:** Preserved the transit-first order, price caps, anti-VIP rule, sparse access, refuge bays, incident response, public audit, privacy, and appeals. Headings and sentence structure were loosened so the passage reads as the author explaining the idea rather than a policy memo.
+- **CityWays explanation:** Kept the author's explanation of the public, limited-access network and made the physical choices clearer. Replaced the generic network image with a metro-style hex study from Doddaballapura to Electronic City. Each cell now has a candidate activity anchor and major-road gateway, including BEL Circle for the Vidyaranyapura sector and the MG Road, Trinity, Halasuru, Indiranagar, Old Madras Road sequence.
+- **Operating rules:** Preserved the transit-first order, price caps, anti-VIP rule, sparse access, refuge bays, incident response, public audit, privacy, and appeals. Added the left collector and exit lane, right continuous moving lane, and next-exit rule as a diagram and hard operating condition.
 - **Speed:** Added a proposed 80 km/h ceiling, a 70 to 75 km/h reliability target, lower speeds for constrained sections and nodes, variable limits, and 20 km travel-time examples. The legal and engineering qualifications were moved into a linked note.
 - **Simulation:** Preserved the model results and every limitation. Replaced symbolic network notation with plain language and retained the key finding that the fixed published rule beat the neural controller in the synthetic test.
 - **BEL Circle and ground level:** Preserved the approved Phase 3 context and the detailed walking, cycling, bus, drainage, access, shade, lighting, and public-space tests.
@@ -17,6 +17,8 @@ Reviewed against the workspace article rules on 20 October 2026.
 ## What moved into notes
 
 - Map scope and the difference between the author's study geography and the formal BMR.
+- The source roads and limits of the hex-cell anchors.
+- The engineering basis and limits of the left exit and deceleration-lane rule.
 - The source and evidentiary limits of the CityWays sketch.
 - Managed-lane precedents and their limits for Bengaluru.
 - Speed-design references, the US reliability benchmark, variable-speed evidence, and Indian legal authority for road-specific limits.
@@ -27,10 +29,10 @@ Reviewed against the workspace article rules on 20 October 2026.
 
 ## Publication checks
 
-- Markdown source and published HTML contain the same essay and 15 notes.
-- Reading time is 30 minutes at 220 words per minute, including notes.
-- All 27 external source URLs were preserved.
-- Four figures are present and have captions and descriptive alternative text.
+- Markdown source and published HTML contain the same essay and 17 notes.
+- Reading time is 33 minutes at 220 words per minute, including notes.
+- All 31 external source URLs were preserved.
+- Five figures are present and have captions and descriptive alternative text.
 - The old blue concept image is no longer used.
 - Heading links, note links, return links, canonical metadata, social metadata, share controls, and GitHub issue 2 discussion controls were validated.
 - The homepage badge, sitemap, and repository documentation were updated.

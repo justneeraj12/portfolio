@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="exit-title exit-desc">
+<title id="exit-title">CityWays left-exit rule</title>
+<desc id="exit-desc">Plan view of a CityWays node. Traffic moves from left to right. The right lane remains the continuous moving lane. An additional lane appears on the left before the node so exiting vehicles can move over early, decelerate, and take the ramp. A driver who misses the exit continues to the next node.</desc>
+<defs><style>
+.bg{fill:#090909}.road{fill:#171716;stroke:#3b3936;stroke-width:2}.lane{fill:none;stroke:#f0eee8;stroke-width:3;stroke-dasharray:18 15}.edge{fill:none;stroke:#76726b;stroke-width:3}.move{fill:none;stroke:#ed5147;stroke-width:9;stroke-linecap:round}.exit{fill:none;stroke:#d9a15f;stroke-width:9;stroke-linecap:round}.kicker{font:700 13px Arial,sans-serif;letter-spacing:3px;fill:#ed5147}.title{font:700 36px Arial,sans-serif;letter-spacing:-1px;fill:#f0eee8}.sub{font:15px Arial,sans-serif;fill:#a4a19a}.label{font:700 15px Arial,sans-serif;fill:#f0eee8}.small{font:13px Arial,sans-serif;fill:#bbb7af}.tiny{font:11px Arial,sans-serif;fill:#8b8882}.sign{fill:#111;stroke:#d9a15f;stroke-width:2}.car{fill:#e9e6df}.bus{fill:#ed5147}.x{stroke:#ed5147;stroke-width:5;stroke-linecap:round}.arrow{fill:#ed5147}.arrowexit{fill:#d9a15f}
+</style></defs>
+<rect class="bg" width="1200" height="560"/>
+<text class="kicker" x="52" y="55">CITYWAYS / ONE RULE AT EVERY NODE</text>
+<text class="title" x="52" y="102">Move left for the exit. Keep right to keep moving.</text>
+<text class="sub" x="52" y="136">The exit lane appears before the ramp. Once the split begins, the decision is over.</text>
+
+<path class="road" d="M55 232 H420 C510 232 555 198 620 171 L760 115 L805 228 H1145 V454 H55Z"/>
+<path class="edge" d="M55 232 H420 C510 232 555 198 620 171 L760 115"/>
+<path class="edge" d="M55 454 H1145"/>
+<path class="lane" d="M55 340 H1145"/>
+<path class="lane" d="M350 286 H438 C520 286 566 247 635 218 L782 157"/>
+
+<path class="move" d="M92 397 H1090"/>
+<polygon class="arrow" points="1090,397 1061,381 1061,413"/>
+<path class="exit" d="M120 286 H420 C508 286 554 244 630 213 L748 165"/>
+<polygon class="arrowexit" points="752,164 719,159 733,188"/>
+
+<rect class="sign" x="288" y="170" width="212" height="52" rx="3"/>
+<text class="label" x="394" y="191" text-anchor="middle">NEXT EXIT · 500 m</text>
+<text class="small" x="394" y="211" text-anchor="middle">move left when the lane opens</text>
+
+<rect class="car" x="195" y="273" width="42" height="21" rx="4"/>
+<rect class="car" x="535" y="224" width="42" height="21" rx="4" transform="rotate(-19 556 234)"/>
+<rect class="bus" x="292" y="383" width="72" height="28" rx="5"/>
+<rect class="car" x="662" y="386" width="42" height="21" rx="4"/>
+
+<text class="label" x="105" y="264">LEFT EXIT / COLLECTOR LANE</text>
+<text class="small" x="105" y="320">move over early, then slow down</text>
+<text class="label" x="786" y="378">RIGHT CONTINUOUS THROUGH LANE</text>
+<text class="small" x="786" y="430">hold the reliable moving speed</text>
+
+<line class="x" x1="754" y1="274" x2="786" y2="306"/><line class="x" x1="786" y1="274" x2="754" y2="306"/>
+<text class="label" x="806" y="286">NO LAST-SECOND CUT</text>
+<text class="small" x="806" y="309">no stop · no reverse · no crossing the nose</text>
+
+<text class="label" x="794" y="184">MISSED IT?</text>
+<text class="small" x="794" y="207">stay in the through lane</text>
+<text class="small" x="794" y="226">and use the next node</text>
+<text class="tiny" x="1142" y="520" text-anchor="end">schematic only · taper, deceleration length, sight distance, barrier and ramp geometry require corridor-specific engineering</text>
+</svg>

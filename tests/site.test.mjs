@@ -24,13 +24,14 @@ test("required static assets exist and are non-empty", () => {
   }
 });
 
-test("Bengaluru essay and its four evidence figures are published", () => {
+test("Bengaluru essay and its five evidence figures are published", () => {
   const root = "site/writing/before-bengaluru-gets-bigger";
   for (const file of [
     `${root}/index.html`,
     `${root}/before-bengaluru-gets-bigger-social.png`,
     `${root}/assets/bengaluru-region-proposal.svg`,
-    `${root}/assets/bengaluru-cityways-network.svg`,
+    `${root}/assets/bengaluru-cityways-hex-study.svg`,
+    `${root}/assets/bengaluru-cityways-exit-rule.svg`,
     `${root}/assets/bel-circle-network-sketch.png`,
     `${root}/output/transitway-simulation-summary.png`,
   ]) {
@@ -38,9 +39,9 @@ test("Bengaluru essay and its four evidence figures are published", () => {
     assert.ok(statSync(file).size > 0, `${file} should not be empty`);
   }
   const essay = readFileSync(`${root}/index.html`, "utf8");
-  assert.match(essay, /30 min read/);
+  assert.match(essay, /33 min read/);
   assert.match(essay, /data-issue="2"/);
-  assert.equal((essay.match(/<figure\b/g) ?? []).length, 4);
+  assert.equal((essay.match(/<figure\b/g) ?? []).length, 5);
   assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
 });
 
