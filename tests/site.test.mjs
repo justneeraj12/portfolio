@@ -16,12 +16,20 @@ test("required static assets exist and are non-empty", () => {
     "site/social-card.png",
     "site/robots.txt",
     "site/sitemap.xml",
+    "site/writings/index.html",
     "site/404.html",
     "site/.nojekyll"
   ]) {
     assert.ok(existsSync(file), `${file} should exist`);
     if (!file.endsWith(".nojekyll")) assert.ok(statSync(file).size > 0, `${file} should not be empty`);
   }
+});
+
+test("Writing navigation uses the shareable writings address", () => {
+  const writingsRoute = readFileSync("site/writings/index.html", "utf8");
+  assert.equal((html.match(/href="writings\/"/g) ?? []).length, 2);
+  assert.match(writingsRoute, /url=\.\.\/#writing/);
+  assert.match(writingsRoute, /https:\/\/justneeraj12\.github\.io\/portfolio\/#writing/);
 });
 
 test("Bengaluru essay and its seven evidence figures are published", () => {
