@@ -17,6 +17,9 @@ Reviewed against the workspace article rules on 20 October 2026.
 - **Personal ending:** Preserved the author's supplied identity, Clarkson ECE background, New York experience, attachment to BEL Circle, time away from Bengaluru, appreciation of early GBA work, and desire to return.
 - **Next essay:** Added the author's closing thought that India has an aesthetics problem because design arrives after engineering, procurement, signage, maintenance, and political decisions, followed by the promised next idea.
 - **Second voice pass:** Rewrote the expanded highway-sign and New York City memory passages in the author's first-person rhythm. Replaced phrases such as “public memory layer,” “consistent symbol system,” and “participate in the value” with direct descriptions of what the author should be able to see, understand, and do. No factual detail or source was removed.
+- **Skimmer architecture and throughput:** Added a four-part summary before the regional map and a three-line person-throughput comparison in the CityWays section. The 8,000 to 10,000 person target remains scenario arithmetic with its assumed vehicle mix and limits in a linked note, not a Bengaluru capacity claim.
+- **Edge CV, privacy, and audit:** Tightened the camera section around narrow edge inference, a deterministic admit/reject/review path, minimal event records, zero raw-video hoarding by default, appeals, and public verification that does not expose individual journeys.
+- **Essay 01 link:** Added a bottom navigation card connecting the regional-scale proposal to the workshop-scale argument in “The One-Centimeter Advantage.”
 
 ## What moved into notes
 
@@ -25,6 +28,7 @@ Reviewed against the workspace article rules on 20 October 2026.
 - The engineering basis and limits of the left exit and deceleration-lane rule.
 - The source and evidentiary limits of the CityWays sketch.
 - Managed-lane precedents and their limits for Bengaluru.
+- The assumed mixed-lane occupancy and an illustrative bus, van, and HOV mix behind the throughput comparison.
 - Speed-design references, the US reliability benchmark, variable-speed evidence, and Indian legal authority for road-specific limits.
 - Occupancy-detection accuracy and failure conditions.
 - Pricing-equity research.
@@ -39,8 +43,8 @@ Reviewed against the workspace article rules on 20 October 2026.
 
 ## Publication checks
 
-- Markdown source and published HTML contain the same essay and 23 notes.
-- Reading time is 43 minutes at 220 words per minute, including notes.
+- Markdown source and published HTML contain the same essay and 24 notes.
+- Reading time is 45 minutes at 220 words per minute, including notes.
 - All 61 external source URLs were preserved.
 - Seven figures containing fourteen images are present and have captions and descriptive alternative text.
 - The nine New York photographs are stored locally with source and licence attribution in the article notes.

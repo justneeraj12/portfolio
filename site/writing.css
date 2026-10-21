@@ -25,6 +25,15 @@
 .essay-body ul { padding-left: 1.25rem; margin: 0 0 1.7rem; }
 .essay-body sup { font: .65em var(--mono); vertical-align: super; line-height: 0; }
 .essay-body sup a { padding: .2em; }
+.architecture-summary { margin: 2.4rem 0 3rem; padding: 1.3rem 1.4rem .4rem; border: 1px solid var(--line-strong); border-left: 3px solid var(--red); background: var(--surface); font: .88rem/1.62 var(--sans); }
+.architecture-summary .architecture-summary-title { margin: 0 0 1rem; color: var(--red); font: .65rem/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+.architecture-summary ol { display: grid; grid-template-columns: 1fr 1fr; gap: .15rem 1.8rem; margin: 0; padding-left: 1.3rem; }
+.architecture-summary li { margin: 0 0 1rem; padding-left: .2rem; }
+.architecture-summary li::marker { color: var(--red); font-family: var(--mono); }
+.throughput-math { margin: 2rem 0 2.4rem; padding: .35rem 0 .35rem 1.25rem; border-left: 2px solid var(--red); font: .82rem/1.55 var(--sans); }
+.throughput-math p { display: grid; grid-template-columns: 9.5rem 1fr; gap: 1rem; margin: .75rem 0; }
+.throughput-math span { color: var(--muted); font: .62rem/1.6 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.throughput-math strong { font-weight: 550; }
 .essay-figure { width: min(1120px, calc(100vw - 2 * var(--pad))); margin: 3rem 50% 3.5rem; transform: translateX(-50%); }
 .essay-figure > a { display: block; }
 .region-map > a, .concept-art > a, .exit-rule > a, .simulation-result > a { overflow-x: auto; overscroll-behavior-inline: contain; }
@@ -44,8 +53,14 @@
 .essay-end > span { font: .6rem var(--mono); color: var(--red); }
 .essay-end p { font-size: 1.4rem; margin: 1rem 0; }
 .essay-end a { display: inline-block; margin: 0 2rem 1rem 0; font: .7rem var(--mono); text-underline-offset: .3em; }
-@media (max-width: 760px) { .essay-body { font-size: 1.1rem; line-height: 1.8; } .essay-header { padding-top: 3rem; } .essay-end { margin-left: var(--pad); margin-right: var(--pad); } .essay-body h2 { margin-top: 3rem; } .essay-figure { width: 100%; margin: 2rem 0 2.7rem; transform: none; } .essay-figure figcaption { padding: 0 .15rem; } .photo-grid { grid-template-columns: 1fr; } .photo-grid img { aspect-ratio: auto; } .notebook-sketch { padding: .4rem; } .region-map img, .concept-art img, .exit-rule img, .simulation-result img { min-width: 760px; } }
-@media print { .essay-page { background: white; color: black; } .status-line, .reading-nav, .essay-contents, .essay-end, .site-footer { display: none; } .essay-body, .essay-body strong, .essay-body h2, .essay-body h3, .essay-subtitle, .essay-byline, .essay-header h1 { color: black; } .essay-header, .reading-layout { max-width: none; padding: 0; } .essay-body { max-width: none; font-size: 11pt; } .essay-header h1 { font-size: 30pt; } .essay-figure { width: 100%; margin: 1rem 0; transform: none; break-inside: avoid; } }
+.essay-related { max-width: 740px; margin: 1rem auto 5rem; padding: 1.5rem 1.6rem; border: 1px solid var(--line-strong); background: var(--surface); }
+.essay-related > span { color: var(--red); font: .62rem/1.5 var(--mono); letter-spacing: .06em; }
+.essay-related h2 { margin: .65rem 0 .7rem; font-size: clamp(1.35rem,3vw,2rem); line-height: 1.2; letter-spacing: -.035em; }
+.essay-related h2 a { color: var(--text); text-decoration: none; }
+.essay-related h2 a:hover { color: var(--red); }
+.essay-related p { max-width: 620px; margin: 0; color: var(--muted); font: .9rem/1.65 var(--sans); }
+@media (max-width: 760px) { .essay-body { font-size: 1.1rem; line-height: 1.8; } .essay-header { padding-top: 3rem; } .essay-end, .essay-related { margin-left: var(--pad); margin-right: var(--pad); } .essay-body h2 { margin-top: 3rem; } .architecture-summary ol { grid-template-columns: 1fr; } .throughput-math p { grid-template-columns: 1fr; gap: .2rem; } .essay-figure { width: 100%; margin: 2rem 0 2.7rem; transform: none; } .essay-figure figcaption { padding: 0 .15rem; } .photo-grid { grid-template-columns: 1fr; } .photo-grid img { aspect-ratio: auto; } .notebook-sketch { padding: .4rem; } .region-map img, .concept-art img, .exit-rule img, .simulation-result img { min-width: 760px; } }
+@media print { .essay-page { background: white; color: black; } .status-line, .reading-nav, .essay-contents, .essay-end, .essay-related, .site-footer { display: none; } .essay-body, .essay-body strong, .essay-body h2, .essay-body h3, .essay-subtitle, .essay-byline, .essay-header h1 { color: black; } .essay-header, .reading-layout { max-width: none; padding: 0; } .essay-body { max-width: none; font-size: 11pt; } .essay-header h1 { font-size: 30pt; } .essay-figure { width: 100%; margin: 1rem 0; transform: none; break-inside: avoid; } }
 .essay-share { max-width: 740px; margin: 4rem auto 0; padding: 2rem 0; border-top: 1px solid var(--line); }
 .essay-share h2 { font-size: 1.5rem; letter-spacing: -.03em; }
 .essay-share > p { color: var(--muted); font-size: .95rem; }

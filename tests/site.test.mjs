@@ -56,8 +56,12 @@ test("Bengaluru essay and its seven evidence figures are published", () => {
     assert.ok(statSync(file).size > 0, `${file} should not be empty`);
   }
   const essay = readFileSync(`${root}/index.html`, "utf8");
-  assert.match(essay, /43 min read/);
+  assert.match(essay, /45 min read/);
   assert.match(essay, /data-issue="2"/);
+  assert.equal((essay.match(/<li><strong>(?:The Regional Compact|The Hex-Cell Gateway Model|Managed CityWays priority|Pre-construction governance locks)\./g) ?? []).length, 4);
+  assert.equal((essay.match(/class="throughput-math"[\s\S]*?<\/div>/g) ?? []).length, 1);
+  assert.match(essay, /zero raw-video hoarding by default/);
+  assert.match(essay, /href="\.\.\/the-one-centimeter-advantage\/"/);
   assert.equal((essay.match(/<figure\b/g) ?? []).length, 7);
   assert.equal((essay.match(/<img\b/g) ?? []).length, 14);
   assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
