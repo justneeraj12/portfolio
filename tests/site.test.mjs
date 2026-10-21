@@ -36,7 +36,7 @@ test("Bengaluru essay and its seven evidence figures are published", () => {
   const root = "site/writing/before-bengaluru-gets-bigger";
   for (const file of [
     `${root}/index.html`,
-    `${root}/before-bengaluru-gets-bigger-social.png`,
+    `${root}/before-bengaluru-gets-bigger-social-v2.png`,
     `${root}/assets/bengaluru-region-proposal.svg`,
     `${root}/assets/bengaluru-cityways-hex-study.svg`,
     `${root}/assets/bengaluru-cityways-exit-rule.svg`,
