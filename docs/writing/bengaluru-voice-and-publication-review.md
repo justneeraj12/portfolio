@@ -1,6 +1,6 @@
 # Bengaluru essay voice and publication review
 
-Reviewed against the workspace article rules on 20 October 2026.
+Reviewed against the workspace article rules on 22 October 2026.
 
 ## What changed in the article
 
@@ -20,6 +20,9 @@ Reviewed against the workspace article rules on 20 October 2026.
 - **Skimmer architecture and throughput:** Added a four-part summary before the regional map and a three-line person-throughput comparison in the CityWays section. The 8,000 to 10,000 person target remains scenario arithmetic with its assumed vehicle mix and limits in a linked note, not a Bengaluru capacity claim.
 - **Edge CV, privacy, and audit:** Tightened the camera section around narrow edge inference, a deterministic admit/reject/review path, minimal event records, zero raw-video hoarding by default, appeals, and public verification that does not expose individual journeys.
 - **Essay 01 link:** Added a bottom navigation card connecting the regional-scale proposal to the workshop-scale argument in “The One-Centimeter Advantage.”
+- **BEL Circle feasibility update:** Kept the notebook sketch as the origin of the idea, then added the lane-level finding that wider entries do not create capacity when several streams compete for fewer receiving lanes. The hypothetical three-queues-to-two-exits example is explicitly illustrative, not a site count.
+- **Candidate geometry and its failure test:** Added three selected R1 drawings: lane continuity, footprint and structural constraints, and the complete walking/bus question. The body states that two through lanes per direction are a scenario to test, the mapped surface axes are about 36.5 metres apart, the candidate shifts its proposed axes to about 48 metres, and the resulting footprint is not proven to fit the road reserve or structure.
+- **Surface operation and CityWays scope:** Clarified that barriers can lock choices on approaches but cannot pass through turning and crossing paths. The six-stage signal sequence may create unacceptable waits, bus dwell can temporarily remove a receiving lane, walking must work as one continuous journey, and the future CityWays layer remains an airspace investigation only.
 
 ## What moved into notes
 
@@ -40,13 +43,15 @@ Reviewed against the workspace article rules on 20 October 2026.
 - Photo authors, source pages, public-domain status, and Creative Commons licences.
 - Dates and institutional roles behind the proposed Bengaluru public-memory layer.
 - The facts and licences behind the Wall Street, Triangle Fire, and MTA memorial photographs.
+- BEL Circle source reconstruction, mapped spacing, assumed lane and walking dimensions, footprint hold, signal-stage limitation, unverified bus and freight swept paths, and the separation between the earlier synthetic CityWays model and the new geometry work.
 
 ## Publication checks
 
-- Markdown source and published HTML contain the same essay and 24 notes.
-- Reading time is 45 minutes at 220 words per minute, including notes.
-- All 61 external source URLs were preserved.
-- Seven figures containing fourteen images are present and have captions and descriptive alternative text.
+- Markdown source and published HTML contain the same essay and 25 notes.
+- Reading time is 49 minutes at 220 words per minute, including notes.
+- All 61 existing external source URLs were preserved; the revision contains 63 unique external source URLs.
+- Ten figures containing seventeen images are present and have captions and descriptive alternative text.
+- The three new R1 sheets use clean vector drawings with full-size links. The supplied satellite screenshot and complete design archive are not published; the compact feasibility design basis is linked from the note.
 - The nine New York photographs are stored locally with source and licence attribution in the article notes.
 - The old blue concept image is no longer used.
 - Heading links, note links, return links, canonical metadata, social metadata, share controls, and GitHub issue 2 discussion controls were validated.

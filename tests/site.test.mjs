@@ -32,7 +32,7 @@ test("Writing navigation uses the shareable writings address", () => {
   assert.match(writingsRoute, /https:\/\/justneeraj12\.github\.io\/portfolio\/#writing/);
 });
 
-test("Bengaluru essay and its seven evidence figures are published", () => {
+test("Bengaluru essay and its ten evidence figures are published", () => {
   const root = "site/writing/before-bengaluru-gets-bigger";
   for (const file of [
     `${root}/index.html`,
@@ -41,6 +41,10 @@ test("Bengaluru essay and its seven evidence figures are published", () => {
     `${root}/assets/bengaluru-cityways-hex-study.svg`,
     `${root}/assets/bengaluru-cityways-exit-rule.svg`,
     `${root}/assets/bel-circle-network-sketch.png`,
+    `${root}/assets/bel-circle-r1-lane-plan.svg`,
+    `${root}/assets/bel-circle-r1-footprint-constraints.svg`,
+    `${root}/assets/bel-circle-r1-pedestrian-bus-plan.svg`,
+    `${root}/assets/bel-circle-r1-design-basis.pdf`,
     `${root}/assets/nys-adirondack-lean-to-1973.webp`,
     `${root}/assets/nys-dec-trail-marker.webp`,
     `${root}/assets/nys-attraction-wayfinding.webp`,
@@ -56,14 +60,14 @@ test("Bengaluru essay and its seven evidence figures are published", () => {
     assert.ok(statSync(file).size > 0, `${file} should not be empty`);
   }
   const essay = readFileSync(`${root}/index.html`, "utf8");
-  assert.match(essay, /45 min read/);
+  assert.match(essay, /49 min read/);
   assert.match(essay, /data-issue="2"/);
   assert.equal((essay.match(/<li><strong>(?:The Regional Compact|The Hex-Cell Gateway Model|Managed CityWays priority|Pre-construction governance locks)\./g) ?? []).length, 4);
   assert.equal((essay.match(/class="throughput-math"[\s\S]*?<\/div>/g) ?? []).length, 1);
   assert.match(essay, /zero raw-video hoarding by default/);
   assert.match(essay, /href="\.\.\/the-one-centimeter-advantage\/"/);
-  assert.equal((essay.match(/<figure\b/g) ?? []).length, 7);
-  assert.equal((essay.match(/<img\b/g) ?? []).length, 14);
+  assert.equal((essay.match(/<figure\b/g) ?? []).length, 10);
+  assert.equal((essay.match(/<img\b/g) ?? []).length, 17);
   assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
 });
 
