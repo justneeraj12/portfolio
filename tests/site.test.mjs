@@ -5,6 +5,12 @@ import test from "node:test";
 const html = readFileSync("site/index.html", "utf8");
 const css = readFileSync("site/styles.css", "utf8");
 const script = readFileSync("site/script.js", "utf8");
+const writingCss = readFileSync("site/writing.css", "utf8");
+const writingScript = readFileSync("site/writing.js", "utf8");
+const essays = [
+  readFileSync("site/writing/the-one-centimeter-advantage/index.html", "utf8"),
+  readFileSync("site/writing/before-bengaluru-gets-bigger/index.html", "utf8"),
+];
 
 test("required static assets exist and are non-empty", () => {
   for (const file of [
@@ -69,6 +75,23 @@ test("Bengaluru essay and its ten evidence figures are published", () => {
   assert.equal((essay.match(/<figure\b/g) ?? []).length, 10);
   assert.equal((essay.match(/<img\b/g) ?? []).length, 17);
   assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
+});
+
+test("writing pages use the field manual design and shared Nocturne mode", () => {
+  for (const essay of essays) {
+    assert.match(essay, /<html lang="en" data-mode="paper">/);
+    assert.match(essay, /data-writing-mode-toggle/);
+    assert.match(essay, /FIELD NOTES/);
+    assert.match(essay, /writing\.css\?v=20261026-field-notes/);
+    assert.ok(!essay.includes("—"), "essay chrome and prose should avoid em dashes");
+  }
+  for (const token of ["var(--paper)", "var(--ink)", "var(--accent)", "var(--line-strong)"]) {
+    assert.ok(writingCss.includes(token), `writing stylesheet should use ${token}`);
+  }
+  assert.ok(!writingCss.match(/var\(--(?:bg|red|red-soft|surface-2|text)\)/));
+  for (const phrase of ["portfolio-mode", "data-writing-mode-toggle", "reading-progress", "localStorage"]) {
+    assert.ok(writingScript.includes(phrase), `writing interaction should include: ${phrase}`);
+  }
 });
 
 test("page has one primary heading and all required sections", () => {
