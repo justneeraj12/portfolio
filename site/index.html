@@ -57,14 +57,14 @@
         <a href="#about" data-nav="about">About</a>
         <a href="writings/" data-nav="writing">Writing</a>
       </nav>
-      <a class="header-cta" href="neeraj-kanchani-resume.pdf" download>Résumé</a>
+      <a class="header-cta" href="neeraj-kanchani-resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
     </header>
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
+        <div class="hero-copy" data-reveal>
           <p class="eyebrow">Robotics software engineer · Potsdam, New York</p>
-          <h1 id="hero-title">Hi, I’m Neeraj.<br>I build robotics software.</h1>
+          <h1 id="hero-title">Hi, I’m Neeraj.<br>I build <em>robotics software.</em></h1>
           <p class="hero-lede">I work mostly with Python, C++, ROS 2, computer vision, and Linux. I like practical systems, clear interfaces, and debugging things until they make sense.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#work">See my work</a>
@@ -73,7 +73,7 @@
           </div>
         </div>
 
-        <div class="signal" aria-label="A simple animated path from sensing to action">
+        <div class="signal" aria-label="A simple animated path from sensing to action" data-reveal>
           <div class="signal-ring signal-ring-outer"></div>
           <div class="signal-ring signal-ring-inner"></div>
           <div class="signal-path" aria-hidden="true"><span></span></div>
@@ -82,103 +82,114 @@
       </section>
 
       <section class="section" id="work" aria-labelledby="work-title" data-section>
-        <header class="section-heading">
+        <header class="section-heading" data-reveal>
           <p class="section-kicker">Selected work</p>
           <h2 id="work-title">A few things I’ve enjoyed building.</h2>
           <p>Most of my work sits somewhere between perception, systems code, and the real machine that has to use it.</p>
         </header>
 
         <div class="project-list">
-          <article class="project project-featured">
-            <div>
+          <article class="project project-featured" data-reveal>
+            <div class="project-copy">
               <p class="project-type">Robotics · perception · control</p>
               <h3>Vision-only warehouse convoy</h3>
               <p>A ROS 2 and Gazebo project exploring how robots can follow each other using only camera input. I worked on perception, relative state estimation, control, simulation, and safe-stop behaviour.</p>
+              <a class="project-link" href="https://github.com/justneeraj12/ee616-vision-leader-follower" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
             </div>
-            <a href="https://github.com/justneeraj12/ee616-vision-leader-follower" target="_blank" rel="noreferrer">View project ↗</a>
+            <div class="project-art" aria-hidden="true">
+              <span class="art-path"></span>
+              <span class="art-node art-camera">camera</span>
+              <span class="art-node art-state">state</span>
+              <span class="art-node art-motion">motion</span>
+            </div>
           </article>
 
-          <article class="project">
+          <article class="project" data-reveal>
             <div>
               <p class="project-type">Linux · C++ · interface design</p>
               <h3>Nocturne Operations Console</h3>
               <p>A native control surface for Hyprland. It brings system controls into one quiet interface and keeps installation and recovery reversible.</p>
             </div>
-            <a href="https://github.com/justneeraj12/nocturne-hyprland" target="_blank" rel="noreferrer">View project ↗</a>
+            <a class="project-link" href="https://github.com/justneeraj12/nocturne-hyprland" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project">
+          <article class="project" data-reveal>
             <div>
               <p class="project-type">Computer vision · local inference</p>
               <h3>Face Unlock for Linux</h3>
               <p>A local face-authentication system with a small PAM bridge, a desktop enrollment flow, and cautious failure behaviour.</p>
             </div>
-            <a href="https://github.com/justneeraj12/face-unlock-linux" target="_blank" rel="noreferrer">View project ↗</a>
+            <a class="project-link" href="https://github.com/justneeraj12/face-unlock-linux" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
 
-          <article class="project">
+          <article class="project" data-reveal>
             <div>
               <p class="project-type">Machine learning · research</p>
               <h3>Cross-lingual speech emotion</h3>
               <p>A research framework for studying how acoustic features carry across languages, with careful data splits and straightforward models.</p>
             </div>
-            <a href="https://github.com/justneeraj12/cross-lingual-speech-emotion-recognition" target="_blank" rel="noreferrer">View project ↗</a>
+            <a class="project-link" href="https://github.com/justneeraj12/cross-lingual-speech-emotion-recognition" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </section>
 
       <section class="section" id="experience" aria-labelledby="experience-title" data-section>
-        <header class="section-heading">
-          <p class="section-kicker">Experience</p>
-          <h2 id="experience-title">Research, simulation, and field work.</h2>
-          <p>I’ve worked on localization, aerial and underwater robots, flight systems, and applied machine learning.</p>
-        </header>
+        <div class="experience-layout">
+          <header class="section-heading" data-reveal>
+            <p class="section-kicker">Experience</p>
+            <h2 id="experience-title">Research, simulation, and field work.</h2>
+            <p>I’ve worked on localization, aerial and underwater robots, flight systems, and applied machine learning.</p>
+          </header>
 
-        <div class="experience-list">
-          <article>
-            <div><p>Clarkson University</p><h3>Graduate Research Assistant</h3></div>
-            <p>I studied localization methods and how sensor placement changes what a system can reliably infer.</p>
-          </article>
-          <article>
-            <div><p>Cambridge Institute of Technology</p><h3>Undergraduate Research Assistant</h3></div>
-            <p>I worked on perception and embedded control for aerial and underwater robotics prototypes.</p>
-          </article>
-          <article>
-            <div><p>Avian Aerospace</p><h3>Drone Technology Intern</h3></div>
-            <p>I calibrated flight controllers, tuned behaviour, and learned to read what flight logs were actually saying.</p>
-          </article>
-          <article>
-            <div><p>iBrains Centre for Precision Neuro-Psychiatry</p><h3>Deep Learning Intern</h3></div>
-            <p>I built signal-processing and model-evaluation workflows for neurological research.</p>
-          </article>
+          <div class="experience-list">
+            <article data-reveal>
+              <div><p>Clarkson University</p><h3>Graduate Research Assistant</h3></div>
+              <p>I studied localization methods and how sensor placement changes what a system can reliably infer.</p>
+            </article>
+            <article data-reveal>
+              <div><p>Cambridge Institute of Technology</p><h3>Undergraduate Research Assistant</h3></div>
+              <p>I worked on perception and embedded control for aerial and underwater robotics prototypes.</p>
+            </article>
+            <article data-reveal>
+              <div><p>Avian Aerospace</p><h3>Drone Technology Intern</h3></div>
+              <p>I calibrated flight controllers, tuned behaviour, and learned to read what flight logs were actually saying.</p>
+            </article>
+            <article data-reveal>
+              <div><p>iBrains Centre for Precision Neuro-Psychiatry</p><h3>Deep Learning Intern</h3></div>
+              <p>I built signal-processing and model-evaluation workflows for neurological research.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="section about" id="about" aria-labelledby="about-title" data-section>
-        <div>
+        <div data-reveal>
           <p class="section-kicker">About</p>
           <h2 id="about-title">I like robots and calm, debuggable software.</h2>
         </div>
-        <div class="about-copy">
+        <div class="about-copy" data-reveal>
           <p>I’m interested in autonomy problems where software has to make sense of a noisy world and still choose a safe action.</p>
           <p>I also care about the less glamorous parts: useful logs, clear boundaries, sensible fallbacks, and documentation that helps the next person.</p>
           <p>I’m currently studying electrical and computer engineering at Clarkson University. Before that, I studied artificial intelligence and machine learning in Bengaluru.</p>
+          <div class="tool-list" aria-label="Tools I use often">
+            <span>Python</span><span>C++</span><span>ROS 2</span><span>OpenCV</span><span>Linux</span><span>Gazebo</span>
+          </div>
         </div>
       </section>
 
       <section class="section writing" id="writing" aria-labelledby="writing-title" data-section>
-        <header class="section-heading">
+        <header class="section-heading" data-reveal>
           <p class="section-kicker">Writing</p>
           <h2 id="writing-title">Things I keep thinking about.</h2>
           <p>Occasional notes on technology, cities, work, and the systems around us.</p>
         </header>
         <div class="writing-list">
-          <article>
+          <article data-reveal>
             <div><h3><a href="writing/the-one-centimeter-advantage/">The One-Centimeter Advantage</a></h3>
             <p>A note about skilled work, social status, and the gap between wanting good engineering and respecting the people who do it.</p></div>
             <a href="writing/the-one-centimeter-advantage/" aria-label="Read The One-Centimeter Advantage">Read ↗</a>
           </article>
-          <article>
+          <article data-reveal>
             <div><h3><a href="writing/before-bengaluru-gets-bigger/">Before Bengaluru Gets Any Bigger</a></h3>
             <p>A proposal for stronger surrounding towns, protected landscapes, and a public transport network that grows with the region.</p></div>
             <a href="writing/before-bengaluru-gets-bigger/" aria-label="Read Before Bengaluru Gets Any Bigger">Read ↗</a>
@@ -188,12 +199,14 @@
       </section>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
-        <p class="section-kicker">Say hello</p>
-        <h2 id="contact-title">If you’re working on something interesting, I’d like to hear about it.</h2>
-        <div class="contact-actions">
-          <a class="button button-primary" href="mailto:neeraj.2xx4@gmail.com">Email me</a>
-          <a class="button" href="neeraj-kanchani-resume.pdf" download>Résumé</a>
-          <button class="copy-button" type="button" data-copy-email data-email="neeraj.2xx4@gmail.com">Copy email</button>
+        <div class="contact-inner" data-reveal>
+          <p class="section-kicker">Say hello</p>
+          <h2 id="contact-title">If you’re working on something interesting, I’d like to hear about it.</h2>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:neeraj.2xx4@gmail.com">Email me</a>
+            <a class="button" href="neeraj-kanchani-resume.pdf" download>Résumé</a>
+            <button class="copy-button" type="button" data-copy-email data-email="neeraj.2xx4@gmail.com">Copy email</button>
+          </div>
         </div>
       </section>
     </main>
