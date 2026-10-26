@@ -89,9 +89,9 @@ test("required claims and evidence boundaries are present", () => {
     "Clarkson University",
     "Nocturne Operations Console",
     "Vision-only leader-follower warehouse convoy",
-    "CPU-first local face authentication for Linux",
+    "CPU first local face authentication for Linux",
     "Cross-lingual speech emotion recognition",
-    "Building calm, debuggable software"
+    "I build robotics software and"
   ]) assert.ok(html.includes(phrase), `missing: ${phrase}`);
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
 });
@@ -99,12 +99,12 @@ test("required claims and evidence boundaries are present", () => {
 test("field manual presents concrete project and experience evidence", () => {
   for (const phrase of [
     "30</strong> disturbance runs / 0 hits",
-    "23.09 ms</strong> cam-to-meas p95",
+    "23.09 ms</strong> cam to meas p95",
     "61</strong> passing CI tests",
     "12.6 ms</strong> embedding p95",
     "13</strong> corpus splits",
-    "200-node wireless network",
-    "92% real-world obstacle avoidance",
+    "network with 200 nodes",
+    "92% obstacle avoidance in real tests",
     "four drone prototypes"
   ]) assert.ok(html.includes(phrase), `homepage should include: ${phrase}`);
   assert.equal((html.match(/data-system="[1-4]"/g) ?? []).length, 4);
@@ -127,6 +127,14 @@ test("telemetry controls and keyboard navigation are wired", () => {
     'key === "d"',
     'key === "w"'
   ]) assert.ok(html.includes(phrase) || script.includes(phrase), `missing interaction: ${phrase}`);
+});
+
+test("homepage uses the Nocturne Obsidian Grid palette instead of YC orange", () => {
+  for (const color of ["#07090a", "#0b0f10", "#1b2925", "#a7b8b1", "#6d9578", "#9a895c", "#9b5b5b"]) {
+    assert.ok(css.includes(color), `missing Nocturne color: ${color}`);
+  }
+  assert.ok(!css.includes("#d94e1f"));
+  assert.ok(!css.includes("#ff6b35"));
 });
 
 test("production metadata and accessibility affordances are present", () => {

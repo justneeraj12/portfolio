@@ -17,7 +17,7 @@
   const applyMode = (mode, persist = true) => {
     const nextMode = mode === "nocturne" ? "nocturne" : "paper";
     root.dataset.mode = nextMode;
-    if (themeMeta) themeMeta.content = nextMode === "nocturne" ? "#0b0d0e" : "#f3efe6";
+    if (themeMeta) themeMeta.content = nextMode === "nocturne" ? "#07090a" : "#edf0eb";
     if (modeButton) {
       modeButton.textContent = nextMode === "nocturne"
         ? "[ SWITCH TO PAPER ☀ ]"
@@ -48,7 +48,7 @@
   const simulatorStates = [
     {
       name: "NOMINAL",
-      sensor: "YOLOv8n RGB VALID (100% — 9.02 ms p95)",
+      sensor: "YOLOv8n RGB VALID (100%, 9.02 ms p95)",
       camera: "23.09 ms p95",
       control: "48.35 ms p95",
       rmse: "0.0523 m (0 collisions)",

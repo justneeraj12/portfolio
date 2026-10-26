@@ -1,6 +1,6 @@
 # Neeraj Kanchani — Robotics Portfolio
 
-A recruiter-focused robotics portfolio with the NOC / Nocturne visual language: near-black surfaces, restrained red signal color, compact type, and control-system details.
+A recruiter-focused robotics portfolio with the NOC / Nocturne Obsidian Grid language: near-black surfaces, sage-green signal color, compact type, and control-system details.
 
 ## Local development
 

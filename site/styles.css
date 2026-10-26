@@ -1,14 +1,16 @@
 :root {
-  --paper: #f3efe6;
-  --surface: #ebe5d8;
-  --ink: #141413;
-  --muted: #5a574f;
-  --line: #d2cbb8;
-  --line-strong: #a8a08d;
-  --accent: #d94e1f;
-  --accent-ink: #fffaf0;
-  --status: #287a55;
-  --grid-dot: rgba(20, 20, 19, .14);
+  --paper: #edf0eb;
+  --surface: #e1e7e1;
+  --ink: #17211d;
+  --muted: #58665f;
+  --line: #c2ccc6;
+  --line-strong: #8fa099;
+  --accent: #365c4c;
+  --accent-ink: #f2f5f1;
+  --status: #5f8f76;
+  --warning: #9a895c;
+  --danger: #9b5b5b;
+  --grid-dot: rgba(54, 92, 76, .16);
   --serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", serif;
   --sans: "Inter", Arial, sans-serif;
   --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
@@ -17,16 +19,18 @@
 }
 
 :root[data-mode="nocturne"] {
-  --paper: #0b0d0e;
-  --surface: #121618;
-  --ink: #e6e4dd;
-  --muted: #8e989d;
-  --line: #22292d;
-  --line-strong: #3a454a;
-  --accent: #ff6b35;
-  --accent-ink: #0b0d0e;
-  --status: #34d399;
-  --grid-dot: rgba(230, 228, 221, .11);
+  --paper: #07090a;
+  --surface: #0b0f10;
+  --ink: #a7b8b1;
+  --muted: #4d5d58;
+  --line: #1b2925;
+  --line-strong: #365c4c;
+  --accent: #6d9578;
+  --accent-ink: #07090a;
+  --status: #82ad8c;
+  --warning: #9a895c;
+  --danger: #9b5b5b;
+  --grid-dot: rgba(109, 149, 120, .15);
   color-scheme: dark;
 }
 
@@ -373,6 +377,11 @@ h1 em { color: var(--accent); font-weight: 400; }
 .state-arrow { color: var(--accent); font-family: var(--mono); }
 
 .fault-button { width: 100%; margin-top: 1rem; border-color: var(--accent); color: var(--accent); }
+
+.simulator[data-state="1"] .state-node.is-active { border-color: var(--warning); background: var(--warning); }
+.simulator[data-state="1"] .fault-button { border-color: var(--warning); color: var(--warning); }
+.simulator[data-state="2"] .state-node.is-active { border-color: var(--danger); background: var(--danger); }
+.simulator[data-state="2"] .fault-button { border-color: var(--danger); color: var(--danger); }
 
 .telemetry-table { margin-top: 1.35rem; border-top: 1px solid var(--line-strong); }
 
