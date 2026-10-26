@@ -73,7 +73,7 @@ test("Bengaluru essay and its ten evidence figures are published", () => {
 
 test("page has one primary heading and all required sections", () => {
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
-  for (const id of ["top", "proof", "fit", "experience", "about", "contact"]) {
+  for (const id of ["top", "work", "experience", "about", "writing", "contact"]) {
     assert.match(html, new RegExp(`id=["']${id}["']`));
   }
 });
@@ -86,17 +86,29 @@ test("navigation anchors resolve to page ids", () => {
 
 test("required claims and evidence boundaries are present", () => {
   for (const phrase of [
-    "M.S. Electrical &amp; Computer Engineering",
-    "Expected December 2026",
-    "B.E. Artificial Intelligence &amp; Machine Learning",
+    "Clarkson University",
+    "artificial intelligence and machine learning",
     "Nocturne Operations Console",
     "Vision-only warehouse convoy",
     "Face Unlock for Linux",
     "Cross-lingual speech emotion",
-    "Simulation-validated",
-    "How I tend to"
+    "calm, debuggable software"
   ]) assert.ok(html.includes(phrase), `missing: ${phrase}`);
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
+});
+
+test("homepage copy stays grounded and avoids performance scorecards", () => {
+  for (const phrase of [
+    "p95",
+    "RMSE",
+    "success in",
+    "error reduction",
+    "SELECTED PROOF",
+    "ROLE SIGNAL",
+    "BUILD 02"
+  ]) assert.ok(!html.includes(phrase), `homepage should not include: ${phrase}`);
+  assert.ok(!html.includes("proof-strip"));
+  assert.ok(!html.includes("case-results"));
 });
 
 test("production metadata and accessibility affordances are present", () => {
@@ -109,7 +121,7 @@ test("production metadata and accessibility affordances are present", () => {
     'aria-label="Primary navigation"'
   ]) assert.ok(html.includes(phrase) || css.includes(phrase), `missing: ${phrase}`);
   assert.ok(script.includes("navigator.clipboard"));
-  assert.ok(script.includes("roleData"));
+  assert.ok(script.includes("IntersectionObserver"));
 });
 
 test("site has no external runtime dependencies", () => {
