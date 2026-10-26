@@ -93,7 +93,7 @@
             <div class="project-copy">
               <p class="project-type">Robotics · perception · control</p>
               <h3>Vision-only warehouse convoy</h3>
-              <p>A ROS 2 and Gazebo project exploring how robots can follow each other using only camera input. I worked on perception, relative state estimation, control, simulation, and safe-stop behaviour.</p>
+              <p>A three-follower ROS 2 Jazzy convoy tested across 30 blackout and yaw-disturbance runs with zero collisions. The Gazebo Harmonic system has 61 automated tests; p95 perception and control latency measured 23.1 ms and 48.4 ms.</p>
               <a class="project-link" href="https://github.com/justneeraj12/ee616-vision-leader-follower" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
             </div>
             <div class="project-art" aria-hidden="true">
@@ -108,7 +108,7 @@
             <div>
               <p class="project-type">Linux · C++ · interface design</p>
               <h3>Nocturne Operations Console</h3>
-              <p>A native control surface for Hyprland. It brings system controls into one quiet interface and keeps installation and recovery reversible.</p>
+              <p>A native C++ and Qt 6 control surface built with Qt Quick and LayerShellQt on Wayland. Preflight snapshots and confirmation-gated rollback are tested in clean Ubuntu and Arch CI containers.</p>
             </div>
             <a class="project-link" href="https://github.com/justneeraj12/nocturne-hyprland" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
@@ -117,7 +117,7 @@
             <div>
               <p class="project-type">Computer vision · local inference</p>
               <h3>Face Unlock for Linux</h3>
-              <p>A local face-authentication system with a small PAM bridge, a desktop enrollment flow, and cautious failure behaviour.</p>
+              <p>A local C++17 authentication system using PAM, V4L2, and credential-checked UNIX sockets. Its CPU-only ONNX path measures 6.6 ms detection and 12.6 ms p95 embeddings without CUDA, while keeping password fallback available.</p>
             </div>
             <a class="project-link" href="https://github.com/justneeraj12/face-unlock-linux" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
@@ -126,7 +126,7 @@
             <div>
               <p class="project-type">Machine learning · research</p>
               <h3>Cross-lingual speech emotion</h3>
-              <p>A research framework for studying how acoustic features carry across languages, with careful data splits and straightforward models.</p>
+              <p>An interpretable acoustic-feature study spanning 13 CAMEO corpus splits and eight languages. It plans speaker-independent partitions and a clean cross-corpus test: train on non-Polish speech, then evaluate once on held-out Polish nEMO.</p>
             </div>
             <a class="project-link" href="https://github.com/justneeraj12/cross-lingual-speech-emotion-recognition" target="_blank" rel="noreferrer">View project <span aria-hidden="true">↗</span></a>
           </article>
@@ -143,16 +143,16 @@
 
           <div class="experience-list">
             <article data-reveal>
-              <div><p>Clarkson University</p><h3>Graduate Research Assistant</h3></div>
-              <p>I studied localization methods and how sensor placement changes what a system can reliably infer.</p>
+              <div><p>Clarkson University</p><h3>Graduate Research Assistant · EE 501 Graduate Grader</h3></div>
+              <p>I compared Gauss-Newton and linearized least-squares TOA localization, then used GDOP-based anchor placement to cut simulated RSSI error by 50% across a 200-node network. From August to December 2026, I also graded graduate DSP problem sets and MATLAB/Python simulations.</p>
             </article>
             <article data-reveal>
               <div><p>Cambridge Institute of Technology</p><h3>Undergraduate Research Assistant</h3></div>
-              <p>I worked on perception and embedded control for aerial and underwater robotics prototypes.</p>
+              <p>I built perception and embedded-control workflows for two UAV/UUV prototypes, reaching 92% real-world obstacle avoidance and reducing OpenCV tracking latency by 30 ms.</p>
             </article>
             <article data-reveal>
               <div><p>Avian Aerospace</p><h3>Drone Technology Intern</h3></div>
-              <p>I calibrated flight controllers, tuned behaviour, and learned to read what flight logs were actually saying.</p>
+              <p>I calibrated ArduPilot flight controllers across four drone prototypes and reduced mid-flight telemetry errors by 12% through PID tuning and flight-log analysis.</p>
             </article>
             <article data-reveal>
               <div><p>iBrains Centre for Precision Neuro-Psychiatry</p><h3>Deep Learning Intern</h3></div>

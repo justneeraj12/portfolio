@@ -20,6 +20,7 @@ Open `http://localhost:4173`. The deployable site lives in `site/`; tests and de
 - Essays: `site/writing/*/index.html` (source copies in `docs/writing/`)
 - Reading styles: `site/writing.css`
 - Small progressive enhancements: `site/script.js`
+- Résumé source and published PDF: `resume/neeraj-kanchani-resume.tex` and `site/neeraj-kanchani-resume.pdf`
 - Search/social metadata: `<head>` in `site/index.html`, `site/robots.txt`, and `site/sitemap.xml`
 
 The site uses no web fonts, analytics, trackers, or frameworks. The essay loads public GitHub comments and reaction totals when the discussion section approaches the viewport; it needs no API key. JavaScript powers the role-fit console as progressive enhancement; the core content remains usable without it.

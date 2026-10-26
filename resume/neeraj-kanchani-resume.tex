@@ -1,0 +1,102 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.46in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{charter}
+\usepackage{microtype}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\hypersetup{
+  hidelinks,
+  pdfauthor={Neeraj Kumar Kanchani},
+  pdftitle={Robotics Software Engineer Resume}
+}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{5pt}{1.5pt}
+\setlist[itemize]{leftmargin=0.17in,itemsep=0.45pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\entry}[2]{\textbf{#1}\hfill #2\\[-1pt]}
+
+\begin{document}
+\begin{center}
+  {\Large\textbf{Neeraj Kumar Kanchani}}\\[-1pt]
+  Open to Relocation - New York, NY $\mid$ +1 (315) 603-7812 $\mid$
+  \href{mailto:neeraj.2xx4@gmail.com}{neeraj.2xx4@gmail.com}\\[-1pt]
+  \href{https://linkedin.com/in/justneeraj12}{linkedin.com/in/justneeraj12} $\mid$
+  \href{https://github.com/justneeraj12}{github.com/justneeraj12}
+\end{center}
+\vspace{-7pt}
+
+\section{Summary}
+{\small Robotics software engineer building tested Python and C++ systems for distributed edge devices, real-time perception, state estimation, and bounded control in ROS 2 and Gazebo.}
+
+\section{Technical Skills}
+{\small
+\textbf{Languages:} Python, C++, C, MATLAB $\mid$
+\textbf{Robotics:} ROS 2 Jazzy, Gazebo Harmonic, state estimation, control systems, multi-robot systems\\[-1pt]
+\textbf{Perception:} YOLOv8, OpenCV, monocular geometry $\mid$
+\textbf{Systems:} Linux, Docker, V4L2, UNIX sockets, GitHub Actions, CI/CD, automated testing}
+
+\section{Technical Projects}
+\entry{Vision-Only Leader-Follower Warehouse Coordination}{\small\href{https://github.com/justneeraj12/ee616-vision-leader-follower}{github.com/justneeraj12/ee616-vision-leader-follower}}
+{\small\textit{ROS 2 Jazzy, Gazebo Harmonic, Python, YOLOv8n, OpenCV, wheel odometry, Docker}}
+\begin{itemize}
+  \item {\small Validated string stability across 12 three-follower chain runs and 18 visual-blackout/yaw-bias disturbance runs (0.1004 m, 0.0739 m, and 0.0523 m worst-case RMSE; zero collisions); designed deterministic TRACK, PREDICT, and SAFE STOP modes using monocular pinhole geometry, wheel odometry, and bounded range-and-bearing control.}
+  \item {\small Diagnosed YOLOv8n RGB/BGR tensor-channel mismatches and stale-frame timestamps, reaching 100\% valid detections, 0.0323 m range RMSE, 0.1569 deg bearing MAE, and 9.02 ms p95 inference latency.}
+  \item {\small Architected a containerized ROS 2 Jazzy/Gazebo Harmonic convoy across isolated namespaces with 5 packages and 61 tests; on an RTX 3050 Ti (4 GB), measured 23.09 ms p95 camera-to-measurement, 48.35 ms p95 measurement-to-control, 642 MiB peak VRAM, and 0.9996 minimum real-time factor.}
+\end{itemize}
+\entry{CPU-First Local Face Authentication for Linux}{\small\href{https://github.com/justneeraj12/face-unlock-linux}{github.com/justneeraj12/face-unlock-linux}}
+{\small\textit{C++17, C, PAM, Qt 6, OpenCV DNN, V4L2, UNIX sockets, libsodium, CMake}}
+\begin{itemize}
+  \item {\small Built a CPU-only ONNX pipeline with YuNet 5-landmark detection and SFace 112x112 alignment/embeddings, measuring 6.6 ms detection and 10.1 ms p50/12.6 ms p95 embedding latency without CUDA.}
+  \item {\small Engineered a C/C++17 systems layer with a minimal PAM bridge, on-demand V4L2 capture, credential-checked UNIX socket IPC, libsodium-encrypted profiles, bounded timeouts, and password/PIN fallback under fail-closed authentication.}
+\end{itemize}
+\entry{Nocturne Operations Console for Hyprland}{\small\href{https://github.com/justneeraj12/nocturne-hyprland}{github.com/justneeraj12/nocturne-hyprland}}
+{\small\textit{C++, Qt 6, Qt Quick, LayerShellQt, Wayland, DBus, Linux IPC}}
+\begin{itemize}
+  \item {\small Built a native C++/Qt 6 and Qt Quick control surface using LayerShellQt on Wayland, with DBus and Linux IPC integrations for standard desktop services.}
+  \item {\small Added deterministic recovery and upgrade verification with preflight snapshots, read-only diagnostics, and confirmation-gated rollback tested in clean Ubuntu and Arch CI containers.}
+\end{itemize}
+
+\section{Experience}
+\entry{Graduate Grader, Digital Signal Processing (EE 501)}{Aug 2026 - Dec 2026}
+{\small\textit{Clarkson University, Dr. Banavar / Department of Electrical and Computer Engineering $\mid$ Potsdam, NY}}
+\begin{itemize}
+  \item {\small Evaluated graduate DSP problem sets and MATLAB/Python simulations covering discrete-time systems, Fourier analysis, Parseval's theorem, sampling/aliasing, and filter stability; authored master solution keys and diagnostic feedback.}
+\end{itemize}
+\entry{Graduate Research Assistant, Theoretical Systems}{Sep 2025 - Jan 2026}
+{\small\textit{Clarkson University, Dr. Banavar's Research Group $\mid$ Potsdam, NY}}
+\begin{itemize}
+  \item {\small Benchmarked Gauss-Newton against linearized least squares for nonlinear TOA localization and reduced simulated RSSI error by 50\% through GDOP-based anchor placement across a 200-node wireless network.}
+\end{itemize}
+\entry{Undergraduate Research Assistant, UAVs and Robotics}{Jan 2023 - Jun 2024}
+{\small\textit{Cambridge Institute of Technology, Dr. Antony's Lab $\mid$ Bengaluru, India}}
+\begin{itemize}
+  \item {\small Integrated perception and embedded control across 2 UAV/UUV prototypes, achieving 92\% real-world obstacle-avoidance success and reducing OpenCV tracking latency by 30 ms.}
+\end{itemize}
+\entry{Student Intern, Drone Technology}{Feb 2023 - Jun 2023}
+{\small\textit{Avian Aerospace $\mid$ Bengaluru, India}}
+\begin{itemize}
+  \item {\small Calibrated ArduPilot flight controllers across 4 drone prototypes, reducing mid-flight telemetry errors by 12\% through PID tuning and flight-log analysis.}
+\end{itemize}
+
+\section{Education}
+\entry{Clarkson University}{Potsdam, NY}
+{\small M.S. in Electrical and Computer Engineering $\mid$ Expected December 2026 $\mid$ \textit{GPA: 3.5/4.0}}\par
+\vspace{1pt}
+\entry{Visvesvaraya Technological University}{Bengaluru, India}
+{\small B.E. in Artificial Intelligence and Machine Learning $\mid$ July 2025 $\mid$ \textit{Honors: First Class with Distinction}}\par
+
+\section{Undergraduate Leadership}
+\entry{Cambridge Institute of Technology}{Bengaluru, India}
+{\small Chair, IEEE Robotics and Automation Society College Chapter; President, College Robotics Club}\par
+
+\end{document}

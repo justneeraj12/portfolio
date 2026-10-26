@@ -97,12 +97,17 @@ test("required claims and evidence boundaries are present", () => {
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
 });
 
-test("homepage copy stays grounded and avoids performance scorecards", () => {
+test("homepage metrics stay grounded and avoid performance scorecards", () => {
   for (const phrase of [
-    "p95",
-    "RMSE",
-    "success in",
-    "error reduction",
+    "30 blackout and yaw-disturbance runs with zero collisions",
+    "61 automated tests",
+    "12.6 ms p95 embeddings without CUDA",
+    "13 CAMEO corpus splits and eight languages",
+    "200-node network",
+    "92% real-world obstacle avoidance",
+    "four drone prototypes"
+  ]) assert.ok(html.includes(phrase), `homepage should include: ${phrase}`);
+  for (const phrase of [
     "SELECTED PROOF",
     "ROLE SIGNAL",
     "BUILD 02"
