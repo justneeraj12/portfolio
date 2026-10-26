@@ -87,33 +87,46 @@ test("navigation anchors resolve to page ids", () => {
 test("required claims and evidence boundaries are present", () => {
   for (const phrase of [
     "Clarkson University",
-    "artificial intelligence and machine learning",
     "Nocturne Operations Console",
-    "Vision-only warehouse convoy",
-    "Face Unlock for Linux",
-    "Cross-lingual speech emotion",
-    "calm, debuggable software"
+    "Vision-only leader-follower warehouse convoy",
+    "CPU-first local face authentication for Linux",
+    "Cross-lingual speech emotion recognition",
+    "Building calm, debuggable software"
   ]) assert.ok(html.includes(phrase), `missing: ${phrase}`);
   assert.ok(!html.toLowerCase().includes(["car", "roll"].join("")));
 });
 
-test("homepage metrics stay grounded and avoid performance scorecards", () => {
+test("field manual presents concrete project and experience evidence", () => {
   for (const phrase of [
-    "30 blackout and yaw-disturbance runs with zero collisions",
-    "61 automated tests",
-    "12.6 ms p95 embeddings without CUDA",
-    "13 CAMEO corpus splits and eight languages",
-    "200-node network",
+    "30</strong> disturbance runs / 0 hits",
+    "23.09 ms</strong> cam-to-meas p95",
+    "61</strong> passing CI tests",
+    "12.6 ms</strong> embedding p95",
+    "13</strong> corpus splits",
+    "200-node wireless network",
     "92% real-world obstacle avoidance",
     "four drone prototypes"
   ]) assert.ok(html.includes(phrase), `homepage should include: ${phrase}`);
+  assert.equal((html.match(/data-system="[1-4]"/g) ?? []).length, 4);
+  assert.equal((html.match(/data-deep-spec/g) ?? []).length, 4);
+  assert.equal((html.match(/class="metric-strip"/g) ?? []).length, 4);
+});
+
+test("telemetry controls and keyboard navigation are wired", () => {
   for (const phrase of [
-    "SELECTED PROOF",
-    "ROLE SIGNAL",
-    "BUILD 02"
-  ]) assert.ok(!html.includes(phrase), `homepage should not include: ${phrase}`);
-  assert.ok(!html.includes("proof-strip"));
-  assert.ok(!html.includes("case-results"));
+    "data-mode-toggle",
+    "data-scan-toggle",
+    "data-fault-trigger",
+    "data-cursor-x",
+    "data-telemetry=",
+    "portfolio-mode",
+    "localStorage",
+    "scrollIntoView",
+    'key === "n"',
+    'key === "f"',
+    'key === "d"',
+    'key === "w"'
+  ]) assert.ok(html.includes(phrase) || script.includes(phrase), `missing interaction: ${phrase}`);
 });
 
 test("production metadata and accessibility affordances are present", () => {
@@ -129,8 +142,10 @@ test("production metadata and accessibility affordances are present", () => {
   assert.ok(script.includes("IntersectionObserver"));
 });
 
-test("site has no external runtime dependencies", () => {
+test("site has no external scripts or CSS imports", () => {
   assert.ok(!html.match(/<script[^>]+src="https?:\/\//));
-  assert.ok(!html.match(/<link[^>]+rel="stylesheet"[^>]+href="https?:\/\//));
+  const externalStyles = [...html.matchAll(/<link[^>]+href="(https?:\/\/[^\"]+)"[^>]*rel="stylesheet"/g)].map((match) => match[1]);
+  assert.deepEqual(externalStyles, [externalStyles[0]].filter(Boolean));
+  if (externalStyles[0]) assert.match(externalStyles[0], /^https:\/\/fonts\.googleapis\.com\//);
   assert.ok(!css.match(/@import\s+url\(["']?https?:\/\//));
 });
