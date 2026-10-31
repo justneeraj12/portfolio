@@ -96,7 +96,9 @@ test("white-collar essay publishes its sources, figures, and interactive scenari
     assert.ok(statSync(file).size > 0, `${file} should not be empty`);
   }
   const essay = essays[2];
-  assert.match(essay, /30 min read/);
+  assert.match(essay, /33 min read/);
+  assert.match(essay, /A foreign client is a customer and a partner, not a god/);
+  assert.match(essay, /Fifth, make the exit fair in both directions/);
   assert.match(essay, /data-issue="3"/);
   assert.match(essay, /id="global-scenario"/);
   assert.equal((essay.match(/<figure\b/g) ?? []).length, 6);

@@ -22,8 +22,8 @@ OUTPUT = ROOT / "site/writing/the-white-collar-mirage/index.html"
 URL = "https://justneeraj12.github.io/portfolio/writing/the-white-collar-mirage/"
 IMAGE = f"{URL}white-collar-mirage-social.png"
 DESCRIPTION = (
-    "Why ₹8 lakh in guaranteed cash should be ordinary for Bengaluru's junior tech "
-    "workers, and how fair pay can move through a city and a country."
+    "Why Bengaluru's tech workers need ₹8 lakh in guaranteed cash, real working "
+    "time, usable benefits, and the power to meet foreign clients as peers."
 )
 DATE = "2026-10-30"
 ISSUE = 3
@@ -131,5 +131,5 @@ for link in check.find_all("a", href=True):
         assert link["href"][1:] in ids, f"Broken anchor: {link['href']}"
 assert len(check.select("article figure")) == 6, "Expected six figures"
 refs = Counter(a["href"] for a in check.select('sup a[href^="#note-"]'))
-assert len(refs) == 11 and all(href[1:] in ids for href in refs), "Missing note"
+assert len(refs) == 12 and all(href[1:] in ids for href in refs), "Missing note"
 print(f"Generated {OUTPUT.relative_to(ROOT)}: {words} words, {minutes} min read, {len(refs)} linked notes, 6 figures.")
