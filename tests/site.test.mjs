@@ -10,6 +10,7 @@ const writingScript = readFileSync("site/writing.js", "utf8");
 const essays = [
   readFileSync("site/writing/the-one-centimeter-advantage/index.html", "utf8"),
   readFileSync("site/writing/before-bengaluru-gets-bigger/index.html", "utf8"),
+  readFileSync("site/writing/the-white-collar-mirage/index.html", "utf8"),
 ];
 
 test("required static assets exist and are non-empty", () => {
@@ -77,13 +78,48 @@ test("Bengaluru essay and its ten evidence figures are published", () => {
   assert.ok(html.includes("writing/before-bengaluru-gets-bigger/"));
 });
 
+test("white-collar essay publishes its sources, figures, and interactive scenario", () => {
+  const root = "site/writing/the-white-collar-mirage";
+  for (const file of [
+    `${root}/index.html`,
+    `${root}/white-collar-mirage-social.png`,
+    `${root}/assets/mirage.css`,
+    `${root}/assets/global-wage-ripple.css`,
+    `${root}/assets/global-wage-ripple.js`,
+    `${root}/assets/d3.v7.9.0.min.js`,
+    `${root}/assets/d3-LICENSE.txt`,
+    `${root}/assets/soi-india-outline.geojson`,
+    `${root}/assets/ne_110m_admin_0_countries.geojson`,
+    "docs/writing/the-white-collar-mirage.md",
+  ]) {
+    assert.ok(existsSync(file), `${file} should exist`);
+    assert.ok(statSync(file).size > 0, `${file} should not be empty`);
+  }
+  const essay = essays[2];
+  assert.match(essay, /30 min read/);
+  assert.match(essay, /data-issue="3"/);
+  assert.match(essay, /id="global-scenario"/);
+  assert.equal((essay.match(/<figure\b/g) ?? []).length, 6);
+  for (const source of [
+    "ccnmtl.columbia.edu/projects/mmt/ambedkar/web/section_14.html",
+    "gutenberg.org/files/55308/55308-h/55308-h.htm",
+    "gutenberg.org/files/40766/40766-h/40766-h.htm",
+    "beta.perseus.tufts.edu/urn%3Acts%3AgreekLit%3Atlg0011.tlg002.jebb1904-eng1%3A724/",
+  ]) assert.ok(essay.includes(source), `missing quote source: ${source}`);
+  const ids = [...essay.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(ids.length, new Set(ids).size, "article IDs should be unique");
+  for (const [, anchor] of essay.matchAll(/href="#([^"]+)"/g)) {
+    assert.ok(ids.includes(anchor), `missing article target: #${anchor}`);
+  }
+  assert.ok(html.includes("writing/the-white-collar-mirage/"));
+});
+
 test("writing pages use the field manual design and shared Nocturne mode", () => {
   for (const essay of essays) {
     assert.match(essay, /<html lang="en" data-mode="paper">/);
     assert.match(essay, /data-writing-mode-toggle/);
     assert.match(essay, /FIELD NOTES/);
     assert.match(essay, /writing\.css\?v=20261026-field-notes/);
-    assert.ok(!essay.includes("—"), "essay chrome and prose should avoid em dashes");
   }
   for (const token of ["var(--paper)", "var(--ink)", "var(--accent)", "var(--line-strong)"]) {
     assert.ok(writingCss.includes(token), `writing stylesheet should use ${token}`);

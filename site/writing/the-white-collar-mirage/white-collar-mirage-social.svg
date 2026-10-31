@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">The White-Collar Mirage</title>
+  <desc id="desc">A dark field-note card with an illustrated offer letter contrasting a six-lakh CTC headline with guaranteed cash and a proposed eight-lakh cash benchmark.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="#31473d"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#07090a"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  <path d="M60 80H1140M60 545H1140" stroke="#365c4c" stroke-width="1"/>
+  <rect x="60" y="79" width="94" height="3" fill="#82ad8c"/>
+  <text x="60" y="55" fill="#82ad8c" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="2">NK // WRITING 03</text>
+  <text x="60" y="190" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="70" font-weight="700" letter-spacing="-3">The White-Collar</text>
+  <text x="60" y="278" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" letter-spacing="-4">Mirage</text>
+  <text x="63" y="350" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="30">A salary headline is not a salary.</text>
+  <text x="63" y="393" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="30">People build the city.</text>
+  <text x="60" y="588" fill="#769180" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="1">NEERAJ KANCHANI / 30 OCT 2026</text>
+  <g transform="translate(735 110)">
+    <rect width="405" height="395" fill="#0b0f10" stroke="#365c4c" stroke-width="2"/>
+    <rect width="405" height="48" fill="#16231b"/>
+    <text x="22" y="30" fill="#82ad8c" font-family="monospace" font-size="15" font-weight="700" letter-spacing="1">ILLUSTRATIVE OFFER / BENGALURU</text>
+    <text x="22" y="91" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="19">Headline CTC</text>
+    <text x="382" y="93" text-anchor="end" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">₹6,00,000</text>
+    <path d="M22 114H383" stroke="#25382d"/>
+    <text x="22" y="148" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="19">Fixed annual cash</text>
+    <text x="382" y="149" text-anchor="end" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">₹5,00,000</text>
+    <path d="M22 170H383" stroke="#25382d"/>
+    <text x="22" y="204" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="19">Monthly bank credit*</text>
+    <text x="382" y="205" text-anchor="end" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700">₹39,067</text>
+    <rect x="22" y="237" width="361" height="2" fill="#82ad8c"/>
+    <text x="22" y="273" fill="#82ad8c" font-family="monospace" font-size="15" font-weight="700" letter-spacing=".5">THE BENCHMARK I WANT</text>
+    <text x="22" y="320" fill="#edf0eb" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700">₹8 lakh cash</text>
+    <text x="22" y="352" fill="#9db0a5" font-family="Arial, Helvetica, sans-serif" font-size="18">Guaranteed. Before worker deductions.</text>
+    <text x="22" y="381" fill="#769180" font-family="Arial, Helvetica, sans-serif" font-size="14">*Illustrative. Before income-tax withholding.</text>
+  </g>
+</svg>

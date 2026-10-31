@@ -39,6 +39,8 @@ Essay: https://justneeraj12.github.io/portfolio/writing/the-one-centimeter-advan
 
 Bengaluru essay: https://justneeraj12.github.io/portfolio/writing/before-bengaluru-gets-bigger/
 
+White-collar essay: https://justneeraj12.github.io/portfolio/writing/the-white-collar-mirage/
+
 The essay is static HTML and remains readable with JavaScript disabled. No account, analytics, or subscription is required. Metadata uses the active GitHub Pages URL; update it when a custom domain is connected.
 
 The GitHub Actions workflow verifies the site and publishes `site/` to GitHub Pages after each push to `main`. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for first publish and the verified sequence for connecting `justneeraj.tech`.
@@ -53,6 +55,6 @@ The implementation is MIT licensed. Personal copy, identity, and project descrip
 
 ## Essay discussion and sharing
 
-Comments and reactions use one GitHub issue per essay: [issue #1](https://github.com/justneeraj12/portfolio/issues/1) for the trades essay and [issue #2](https://github.com/justneeraj12/portfolio/issues/2) for the Bengaluru essay. Visitors read the articles without signing in; commenting and reacting open GitHub and require a GitHub account. The page displays the latest page of up to 30 comments, omits minimized comments, and retains direct links if the public API is unavailable or rate-limited. No visitor credentials are stored.
+Comments and reactions use one GitHub issue per essay: [issue #1](https://github.com/justneeraj12/portfolio/issues/1) for the trades essay, [issue #2](https://github.com/justneeraj12/portfolio/issues/2) for the Bengaluru essay, and [issue #3](https://github.com/justneeraj12/portfolio/issues/3) for the white-collar essay. Visitors read the articles without signing in; commenting and reacting open GitHub and require a GitHub account. The page displays the latest page of up to 30 comments, omits minimized comments, and retains direct links if the public API is unavailable or rate-limited. No visitor credentials are stored.
 
 Native sharing is used where supported, with a copy-link fallback. `site/writing.js` handles sharing; `site/writing-comments.js` handles discussion display.
