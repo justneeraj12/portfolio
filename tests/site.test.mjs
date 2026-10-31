@@ -102,10 +102,12 @@ test("white-collar essay publishes its sources, figures, and interactive scenari
   assert.match(essay, /data-issue="3"/);
   assert.match(essay, /id="global-scenario"/);
   assert.equal((essay.match(/<figure\b/g) ?? []).length, 6);
+  assert.equal((essay.match(/<blockquote\b/g) ?? []).length, 5);
   for (const source of [
     "ccnmtl.columbia.edu/projects/mmt/ambedkar/web/section_14.html",
     "gutenberg.org/files/55308/55308-h/55308-h.htm",
     "gutenberg.org/files/40766/40766-h/40766-h.htm",
+    "gutenberg.org/files/3261/3261-h/3261-h.htm",
     "beta.perseus.tufts.edu/urn%3Acts%3AgreekLit%3Atlg0011.tlg002.jebb1904-eng1%3A724/",
   ]) assert.ok(essay.includes(source), `missing quote source: ${source}`);
   const ids = [...essay.matchAll(/\sid="([^"]+)"/g)].map(match => match[1]);

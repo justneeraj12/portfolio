@@ -130,6 +130,12 @@ So when someone says, “Pay them more and the work will just move to Vietnam or
 
 The world has moved. Clients buy engineering judgement, cloud systems, products, and teams that can explain what went wrong when a release breaks. Even [Nasscom's review](https://www.nasscom.in/sites/default/files/media_pdf/Nasscom%20SR%20Press%20release.pdf) talks about growth in engineering R&D and digital engineering. If we respond by selling the same people as the cheapest available hours, we are training firms to compete by wearing out the talent that makes them valuable.
 
+The excuse is old:
+
+> “To this ‘cheapening of production’, as it was called, everything was sacrificed: the happiness of the workman at his work...”
+>
+> A character in [William Morris, *News from Nowhere*](https://www.gutenberg.org/files/3261/3261-h/3261-h.htm)
+
 India cannot announce that it has moved beyond back-office work and then run its offices around somebody else's clock. The proof is in the working day: hours a team can plan, holidays people can actually take, benefits they can use, and a way to leave without putting the next job at risk. A new label on the export invoice changes none of that.
 
 A foreign client is a customer and a partner, not a god. We can listen, make a promise, deliver the work, push back when the scope changes, and charge for urgent coverage. If a US release needs someone awake at midnight here, the firm can staff and pay a rotation. If it gives away one engineer's evening to win the bid, fuck that. The firm has to make this clear at the sales table; the worker should not have to negotiate it alone on a late call.
@@ -140,7 +146,13 @@ There is a cost to that model, even when it does not appear on the invoice. The 
 
 [Before Bengaluru Gets Any Bigger](https://justneeraj12.github.io/portfolio/writing/before-bengaluru-gets-bigger/) asks what the city gives back. A place can generate enormous export invoices while the people producing them lose hours reaching work, pay for tanker water, and rent whatever room the salary will bear. The employer did not create every broken street. The state still cannot celebrate the invoice and treat the worker's life outside the office as somebody else's balance sheet.
 
-Tagore, writing about India's social divisions, put it bluntly: “Our real problem in India is not political. It is social.” [*Nationalism in India*](https://www.gutenberg.org/files/40766/40766-h/40766-h.htm) That does not excuse the state from building roads, supplying water, or enforcing the law. It asks what kind of bargain we are making when everyone else pays for a cheap bid.
+Tagore was writing about India's social divisions, and he put it bluntly:
+
+> “Our real problem in India is not political. It is social.”
+>
+> [Rabindranath Tagore, *Nationalism in India*](https://www.gutenberg.org/files/40766/40766-h/40766-h.htm)
+
+That does not excuse the state from building roads, supplying water, or enforcing the law. It asks what kind of bargain we are making when everyone else pays for a cheap bid.
 
 That is the digital zamindari I mean. Gatekeepers collect from a system they did not build alone. The person doing the work cannot even see the whole ledger. That ledger is where I would start changing the rules.
 
@@ -212,7 +224,11 @@ The global side of this is easier to argue when the bill is visible. Move the as
 
 There may be more tax from taxable purchases and earnings, but it does not flow straight into a Bengaluru road or a public tap. Governments have to choose that investment.
 
-Henry George put the other danger in a sentence: “That increasing productive power does not add to the reward of labor, is not because of competition, but because competition is one-sided.” [*Progress and Poverty*](https://www.gutenberg.org/files/55308/55308-h/55308-h.htm) He was writing about land.
+Henry George was writing about land, and he put the other danger in a sentence:
+
+> “That increasing productive power does not add to the reward of labor, is not because of competition, but because competition is one-sided.”
+>
+> [Henry George, *Progress and Poverty*](https://www.gutenberg.org/files/55308/55308-h/55308-h.htm)
 
 If housing stays scarce while demand rises, landlords can take much of the raise. The neighbourhood cleaner, driver, and shop worker can then face higher prices without a better wage. **A richer tech worker is not enough; the city has to become more liveable for everyone doing its work.** [World Bank on India's urban housing and services needs](https://www.worldbank.org/en/news/press-release/2025/07/22/india-has-a-critical-opportunity-to-drive-resilient-urban-development-says-new-world-bank-report)<sup><a id="note-ref-scale-5" href="#note-scale" aria-label="Methodology note 7">7</a></sup>
 
